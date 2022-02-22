@@ -1,4 +1,6 @@
 .hero-section{
+  position: relative;
+
   .video-container{
     width:100%;
     position: absolute;
@@ -24,5 +26,6 @@
   .text-box{
     max-width:435px;
     margin-top:25px;
+    margin-bottom:30px;
   }
 }

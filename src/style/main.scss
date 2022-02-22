@@ -10,10 +10,17 @@
 
 @import "sections/hero-section";
 @import "sections/ecosystem-section";
+@import "sections/hacks-section";
 
 body{
   background:$bgColor;
   color:#fff;
+}
+
+main{
+  max-width:1920px;
+  margin:auto;
+  position:relative;
 }
 
 section{

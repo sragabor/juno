@@ -7,7 +7,7 @@ class Footer extends React.Component {
             <footer>
                 <div className={'video-container'}>
                     <div className={'video-wrapper'}>
-                        <video autoPlay={true} loop={true} playsInline={true}>
+                        <video autoPlay={true} loop={true} playsInline={true} muted={true}>
                             <source src={FooterVideo} type="video/mp4" />
                         </video>
                     </div>

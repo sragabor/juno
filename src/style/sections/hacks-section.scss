@@ -1,0 +1,41 @@
+.hacks-section{
+  padding:200px 0 160px;
+
+  .bg{
+    background:url(../images/hack-section-bg.png) no-repeat scroll left top transparent;
+    background-size:contain;
+    position:absolute;
+    left:0;
+    z-index:0;
+    width:50%;
+    height:100%;
+  }
+
+  .bounty{
+    padding:0 25px 45px 0;
+
+    .image{
+      margin-bottom:25px;
+      max-height:96px;
+
+      .gatsby-image-wrapper{
+        height:100%;
+      }
+    }
+
+    &.first{
+      .image{
+        transform:translateX(-20%);
+      }
+    }
+
+    .title{
+      font-family: $dm;
+      font-size: 22px;
+      color: #FFFFFF;
+      letter-spacing: 0;
+      line-height: 20px;
+      margin-bottom:10px;
+    }
+  }
+}
