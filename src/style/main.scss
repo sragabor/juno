@@ -1,0 +1,51 @@
+@import "reset";
+
+@import "mixins";
+@import "fonts";
+@import "variables";
+@import "typo";
+@import "buttons";
+
+@import "components/header";
+
+@import "sections/hero-section";
+@import "sections/ecosystem-section";
+
+body{
+  background:$bgColor;
+  color:#fff;
+}
+
+section{
+  .container{
+    max-width:1160px;
+    width:100%;
+    margin:auto;
+    position: relative;
+    z-index:1;
+  }
+}
+
+footer{
+  width:100%;
+  display:none;
+
+  .video-container{
+    width:100%;
+    position:absolute;
+    bottom:0;
+
+    .video-wrapper{
+      width:100%;
+      position:relative;
+      padding-top:47%;
+
+      video{
+        width:100%;
+        position:absolute;
+        bottom:0;
+      }
+
+    }
+  }
+}

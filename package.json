@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-minimal",
+  "name": "juno",
   "version": "1.0.0",
   "private": true,
-  "description": "A Gatsby starter with no plugins and a single welcome page.",
-  "author": "Laurie Barth",
+  "description": "juno",
+  "author": "Gabor Sera",
   "keywords": [
     "gatsby"
   ],
@@ -14,10 +14,29 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean"
   },
-  "license": "0BSD",
   "dependencies": {
-    "gatsby": "^4.7.2",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1"
+    "@mdx-js/mdx": "^1.6.22",
+    "@mdx-js/react": "^1.6.22",
+    "@popperjs/core": "^2.11.2",
+    "bootstrap": "^5.1.3",
+    "gatsby": "^4.6.0",
+    "gatsby-plugin-google-analytics": "^4.6.0",
+    "gatsby-plugin-image": "^2.6.0",
+    "gatsby-plugin-manifest": "^4.6.0",
+    "gatsby-plugin-mdx": "^3.6.0",
+    "gatsby-plugin-react-helmet": "^5.6.0",
+    "gatsby-plugin-sass": "^5.6.0",
+    "gatsby-plugin-sharp": "^4.6.0",
+    "gatsby-plugin-sitemap": "^5.6.0",
+    "gatsby-source-filesystem": "^4.6.0",
+    "gatsby-transformer-remark": "^5.6.0",
+    "gatsby-transformer-sharp": "^4.6.0",
+    "gatsby-video": "^0.2.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-helmet": "^6.1.0",
+    "redux": "^4.1.2",
+    "sass": "^1.49.0",
+    "video-react": "^0.15.0"
   }
 }

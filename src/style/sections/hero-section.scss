@@ -1,0 +1,28 @@
+.hero-section{
+  .video-container{
+    width:100%;
+    position: absolute;
+    z-index:1;
+
+    .video-wrapper{
+      width:100%;
+      padding-top:40%;
+      position: relative;
+    }
+
+    video{
+      width:100%;
+      position: absolute;
+      top:0;
+    }
+  }
+
+  .container{
+    padding:200px 0 140px;
+  }
+
+  .text-box{
+    max-width:435px;
+    margin-top:25px;
+  }
+}

@@ -1,0 +1,48 @@
+a{
+  text-decoration: none;
+  color:inherit;
+  font-family:inherit;
+  font-style:inherit;
+
+  &:hover{
+    color:inherit;
+  }
+}
+
+h1{
+  font-family: $dm;
+  font-size: 100px;
+  margin:0;
+  color: #FFFFFF;
+  letter-spacing: 0;
+  line-height: 104px;
+}
+
+h2{
+  font-family: $dm;
+  font-size: 50px;
+  color: #FFFFFF;
+  letter-spacing: 0;
+  line-height: 56px;
+  margin:0 0 20px 0;
+}
+
+.text-box{
+  font-family: $gv;
+  font-weight:normal;
+  font-size: 17px;
+  color: #E9D6D6;
+  letter-spacing: 0.32px;
+  line-height: 23px;
+  margin-bottom:30px;
+}
+
+legend{
+  font-family: $dm;
+  font-size: 15px;
+  text-transform: uppercase;
+  color: $purple;
+  letter-spacing: 0.21px;
+  padding:0;
+  margin:0 0 3px 0;
+}

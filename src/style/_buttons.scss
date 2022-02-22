@@ -1,0 +1,30 @@
+button{
+  background: $red;
+  border-radius: 25px;
+  font-family: $dv;
+  font-weight:bold;
+  font-size: 15px;
+  color: #FFFFFF;
+  letter-spacing: 0.62px;
+  text-align: center;
+  padding:16px 20px;
+  transition: 500ms all ease-in-out;
+
+  &:hover{
+    background:darken($red,10%);
+  }
+}
+
+.link{
+  font-family: $dv;
+  font-weight:bold;
+  font-size: 15px;
+  color: $red;
+  letter-spacing: 0.19px;
+  padding:16px 20px;
+  transition: 500ms all ease-in-out;
+
+  &:hover{
+    color:darken($red,10%);
+  }
+}

@@ -1,0 +1,18 @@
+.ecosystem-section{
+  .video-container{
+    width:100%;
+
+    .video-wrapper{
+      padding-top:86%;
+      width:100%;
+      position: relative;
+
+      video{
+        position:absolute;
+        right:0;
+        width:155%;
+        top:0;
+      }
+    }
+  }
+}
