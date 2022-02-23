@@ -1,4 +1,7 @@
 @import "reset";
+@import "config";
+
+@import "~bootstrap/scss/bootstrap";
 
 @import "mixins";
 @import "fonts";
@@ -11,10 +14,15 @@
 @import "sections/hero-section";
 @import "sections/ecosystem-section";
 @import "sections/hacks-section";
+@import "sections/services-section";
 
 body{
   background:$bgColor;
-  color:#fff;
+  font-family: $gv;
+  font-size: 16px;
+  color: #FFFFFF;
+  letter-spacing: 0.36px;
+  line-height: 20px;
 }
 
 main{
@@ -39,7 +47,7 @@ footer{
 
   .video-container{
     width:100%;
-    position:absolute;
+    position:relative;
     bottom:0;
 
     .video-wrapper{
@@ -53,6 +61,34 @@ footer{
         bottom:0;
       }
 
+    }
+  }
+}
+
+// CAROUSEL ARROWS
+.react-multiple-carousel__arrow{
+  padding:0;
+  background-color: rgba(240,130,125,0.10);
+  border-radius: 50%;
+  transition:500ms all ease-in-out;
+
+  &:hover{
+    background-color: #F0827D;
+  }
+
+  &:before{
+    font-size:15px;
+    font-family: 'juno';
+  }
+
+  &.react-multiple-carousel__arrow--left{
+    &:before{
+      content: "\e906";
+    }
+  }
+  &.react-multiple-carousel__arrow--right{
+    &:before{
+      content: "\e905";
     }
   }
 }

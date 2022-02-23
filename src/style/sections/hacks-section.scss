@@ -38,4 +38,30 @@
       margin-bottom:10px;
     }
   }
+
+  .feature{
+    padding-top:120px;
+    padding-right:68px;
+
+    &.align-top{
+      padding-top:0;
+      padding-right:0;
+      padding-left:68px;
+    }
+
+    .image{
+      .gatsby-image-wrapper{
+        height:100%;
+      }
+    }
+
+    .title{
+      font-family: $dm;
+      font-size: 28px;
+      color: #FFFFFF;
+      letter-spacing: 0;
+      line-height: 26px;
+      margin-bottom:20px;
+    }
+  }
 }

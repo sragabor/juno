@@ -34,6 +34,33 @@ h2{
   color: #E9D6D6;
   letter-spacing: 0.32px;
   line-height: 23px;
+
+  ul,ol{
+    margin:20px 0;
+    padding:0;
+
+    li{
+      padding-left:22px;
+      font-family: $dsb;
+      font-size: 18px;
+      color: #FFFFFF;
+      letter-spacing: 0;
+      line-height: 22px;
+      position:relative;
+      margin:5px 0;
+
+      &:before{
+        position:absolute;
+        content:'';
+        left:0;
+        top:7px;
+        width:10px;
+        height:7px;
+        background:url(../images/SVG/checkmark.svg) no-repeat scroll center center transparent;
+        display:inline-block;
+      }
+    }
+  }
 }
 
 legend{
