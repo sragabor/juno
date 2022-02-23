@@ -4,7 +4,8 @@ import {StaticImage} from "gatsby-plugin-image";
 
 import HeroVideo from "../videos/hero.mp4"
 import EcosystemVideo from "../videos/ecosystem.mp4"
-import PiechartVideo from "../videos/piechart.mp4"
+import PiechartVideo from "../videos/test.webm"
+import PiechartVideoMov from "../videos/mov.mov"
 
 import Contributors from "../components/contributors";
 
@@ -414,8 +415,9 @@ const IndexPage = () => {
                         <div className={'col-12 col-md-8'}>
                             <div className={'video-container'}>
                                 <div className={'video-wrapper'}>
-                                    <video autoPlay={true} loop={false} playsInline={true} muted={true}>
-                                        <source src={PiechartVideo} type="video/mp4" />
+                                    <video poster="../images/poster.png" autoPlay={true} loop={true} playsInline={true} muted={true}>
+                                        <source src={PiechartVideoMov} type="video/webm" />
+                                        <source src={PiechartVideo} type="video/webm" />
                                     </video>
                                 </div>
                             </div>
