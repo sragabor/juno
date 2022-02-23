@@ -415,7 +415,7 @@ const IndexPage = () => {
                         <div className={'col-12 col-md-8'}>
                             <div className={'video-container'}>
                                 <div className={'video-wrapper'}>
-                                    <video poster="../images/poster.png" autoPlay={true} loop={true} playsInline={true} muted={true}>
+                                    <video autoPlay={true} loop={true} playsInline={true} muted={true}>
                                         <source src={PiechartVideoMov} type="video/webm" />
                                         <source src={PiechartVideo} type="video/webm" />
                                     </video>
