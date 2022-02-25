@@ -2,12 +2,23 @@ import React from "react";
 import {Link} from "gatsby";
 
 class Header extends React.Component {
+    componentDidMount() {
+        window.addEventListener("scroll", this.toggleHeaderClass);
+        this.toggleHeaderClass();
+    }
     toggleMenu = function(){
         document.getElementById('menu').classList.toggle('open');
     }
+    toggleHeaderClass = () => {
+        if (window.scrollY > 100) {
+            document.getElementById("header").classList.add("blur");
+        } else {
+            document.getElementById("header").classList.remove("blur");
+        }
+    };
     render() {
         return (
-            <header>
+            <header id={'header'}>
                 <div className={'container'}>
                     <Link to={'/'}>
                         <svg width="120px" height="44px" viewBox="0 0 120 44" version="1.1" xmlns="http://www.w3.org/2000/svg">
@@ -32,8 +43,8 @@ class Header extends React.Component {
                             <li><Link to={'/'}>Docs</Link></li>
                             <li><Link to={'/'}>Blog</Link></li>
                             <li><Link to={'/'}>Updates</Link></li>
-                            <li className={'social'}><Link to={'/'}>G</Link></li>
-                            <li className={'social'}><Link to={'/'}>D</Link></li>
+                            <li className={'social'}><Link to={'/'}><i className={'icon-social-github'}></i></Link></li>
+                            <li className={'social'}><Link to={'/'}><i className={'icon-social-discord'}></i></Link></li>
                         </ul>
                     </nav>
 

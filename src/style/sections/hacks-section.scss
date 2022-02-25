@@ -1,5 +1,6 @@
 .hacks-section{
   padding:200px 0 160px;
+  position: relative;
 
   .bg{
     background:url(../images/hack-section-bg.png) no-repeat scroll left top transparent;
@@ -8,7 +9,8 @@
     left:0;
     z-index:0;
     width:50%;
-    height:100%;
+    bottom:0;
+    top:0;
   }
 
   .bounty{

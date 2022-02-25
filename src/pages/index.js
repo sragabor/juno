@@ -4,8 +4,8 @@ import {StaticImage} from "gatsby-plugin-image";
 
 import HeroVideo from "../videos/hero.mp4"
 import EcosystemVideo from "../videos/ecosystem.mp4"
-import PiechartVideo from "../videos/test.webm"
-import PiechartVideoMov from "../videos/mov.mov"
+import PiechartVideo from "../videos/pieChart.webm"
+import PiechartVideoMov from "../videos/chart_withAlpha-hevc-safari.mp4"
 
 import Contributors from "../components/contributors";
 
@@ -65,7 +65,7 @@ const IndexPage = () => {
                        </div>
                        <div className={'col-12 col-md-6'}>
                            <legend>ECOSYSTEM</legend>
-                           <h2>47 apps, contracts, tools and 1400 DAO's built on Juno</h2>
+                           <h3>47 apps, contracts, tools and 1400 DAO's built on Juno</h3>
                            <div className={'text-box'}>
                                Discover a wide variety of dapps, contracts and tools, built in the Junø ecosystem by developers and contributors from across the globe
                            </div>
@@ -82,8 +82,8 @@ const IndexPage = () => {
                 <div className={'container'}>
                     <div className={'row align-items-center mb-5'}>
                         <div className={'col-12 col-md-6 pe-md-5'}>
-                            <h2 className={'mb-4'}>Hacks and <br/>
-                            Bounties</h2>
+                            <h3 className={'mb-4'}>Hacks and <br/>
+                            Bounties</h3>
                             <div className={'text-box'}>
                                 <p>
                                     The Moneta Hacks are the largest incentivised smart contract challenges in the world. Kickoff will be the completion of the Juno-1 main-net upgrade to support Cosmwasm.
@@ -182,7 +182,7 @@ const IndexPage = () => {
                         </div>
                         <div className={'col-12 col-md-6'}>
                             <legend>COSMWASM</legend>
-                            <h2 className={'mb-4'}>Interoperable Smart Contracts - Home of CosmWasm</h2>
+                            <h3 className={'mb-4'}>Interoperable Smart Contracts - Home of CosmWasm</h3>
                             <div className={'text-box'}>
                                 Simple, secure and fast virtual machine set up to sandbox or partition your application’s actions for better testing, security, performance and speed.
                             </div>
@@ -336,7 +336,7 @@ const IndexPage = () => {
                             />
                         </div>
                         <div className={'col-12 col-md-5 pe-4'}>
-                            <h2>Easy access to Osmosis and JunoSwap</h2>
+                            <h3>Easy access to Osmosis and JunoSwap</h3>
                             <div className={'text-box pe-5'}>
                                 Swap & LP your Juno on the largest Cosmos decentralized exchange.
                             </div>
@@ -393,10 +393,10 @@ const IndexPage = () => {
 
                     <div className={'row contributors align-items-center'}>
                         <div className={'col-12 col-md-6'}>
-                            <h2>
+                            <h3>
                                 Core <br/>
                                 Contributors
-                            </h2>
+                            </h3>
 
                             <div className={'row mt-4'}>
                                 <div className={'col-auto'}>
@@ -412,17 +412,34 @@ const IndexPage = () => {
                     </div>
 
                     <div className={'row piechart'}>
-                        <div className={'col-12 col-md-8'}>
+                        <div className={'col-12 col-md-7'}>
                             <div className={'video-container'}>
                                 <div className={'video-wrapper'}>
-                                    <video autoPlay={true} loop={true} playsInline={true} muted={true}>
-                                        <source src={PiechartVideoMov} type="video/webm" />
+                                    <video autoPlay={true} loop={false} playsInline={true} muted={true}>
+                                        <source src={PiechartVideoMov} type='video/mp4;codecs="hvc1"'/>
                                         <source src={PiechartVideo} type="video/webm" />
                                     </video>
                                 </div>
                             </div>
                         </div>
-                        <div className={'col-12 col-md-4'}></div>
+                        <div className={'col-12 col-md-5'}>
+                            <h3>Token Economics</h3>
+                            <div className={'text-box'}>
+                                <p>Juno Network is a completely community owned and operated smart contract platform.</p>
+                                <p>Therefore, the majority of the initial supply was stakedroped to atom holders, committed to the community pool, or committed to the development reserve for ongoing development of the Juno Network features.</p>
+                            </div>
+
+                            <div className={'black-box'}>
+                                <ul>
+                                    <li>No seed sale, no private sale, no public sale</li>
+                                    <li>Fairdrop / Stakedrop Genesis launch.</li>
+                                    <li>Whalecap at 50k ATOM per address</li>
+                                    <li>Genesis supply to 46.000 unique atom stakers</li>
+                                    <li>Exchange validator exclusion</li>
+                                    <li>Exchange delegator exclusion</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
 
                 </div>

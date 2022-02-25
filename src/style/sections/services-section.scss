@@ -1,5 +1,6 @@
 .services-section{
   padding-top:110px;
+  position:relative;
 
   .section-bg{
     background:url(../images/services-bg.png) no-repeat scroll left bottom transparent;
@@ -168,7 +169,7 @@
   }
 
   .contributors{
-    margin-top:120px;
+    margin-top:130px;
 
     .contributor{
       .name{
@@ -195,6 +196,8 @@
   }
 
   .piechart{
+    padding-top:130px;
+
     .video-container{
       width:100%;
 
@@ -206,8 +209,42 @@
         video{
           position:absolute;
           right:0;
-          width:155%;
+          width:100%;
           top:0;
+        }
+      }
+    }
+
+    .black-box{
+      background: rgba(0,0,0,0.15);
+      border-radius:20px;
+      padding:25px 30px;
+      margin-top:25px;
+
+      ul{
+        margin:0;
+        padding:0;
+        list-style:none;
+
+        li{
+          position:relative;
+          font-family: $gv;
+          font-weight:500;
+          font-size: 17px;
+          color: #E9D6D6;
+          letter-spacing: 0.32px;
+          line-height: 23px;
+          padding:10px 0 10px 28px;
+
+          &:before{
+            content:'';
+            background:url(../images/SVG/checkmark.svg) no-repeat scroll center left;
+            width:10px;
+            height:7px;
+            position:absolute;
+            left:0;
+            top:17px;
+          }
         }
       }
     }
