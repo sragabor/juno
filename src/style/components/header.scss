@@ -19,6 +19,10 @@ header{
     background-color:rgba(0,0,0,.4);
   }
 
+  .logo{
+    float:left;
+  }
+
   .container{
     width:100%;
     max-width:1160px;
@@ -26,7 +30,7 @@ header{
 
   nav{
     float:right;
-    margin-top:8px;
+    margin-top:14px;
 
     ul{
       list-style: none;

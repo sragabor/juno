@@ -7,7 +7,7 @@ module.exports = {
         title: `Juno`,
         siteUrl: `https://juno.co`
     },
-    plugins: ["gatsby-plugin-sass", {
+    plugins: ["gatsby-plugin-sass", "gatsby-plugin-scroll-reveal", {
         resolve: 'gatsby-plugin-google-analytics',
         options: {
             "trackingId": "GA-555555"

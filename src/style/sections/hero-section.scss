@@ -20,12 +20,20 @@
   }
 
   .container{
-    padding:200px 0 140px;
+    padding:200px 10px 140px;
+
+    @include media-breakpoint-down(xxl){
+      padding:140px 10px 100px;
+    }
   }
 
   .text-box{
     max-width:435px;
     margin-top:25px;
     margin-bottom:30px;
+
+    @include media-breakpoint-down(md){
+      max-width:unset;
+    }
   }
 }

@@ -1,0 +1,53 @@
+.ecosystem{
+  background: rgba(0,0,0,0.08);
+  border-radius: 10px;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  width:100%;
+  padding:20px;
+
+  .icon{
+    height:36px;
+    margin-bottom:10px;
+
+    .gatsby-image-wrapper{
+      max-height:100%;
+    }
+  }
+
+  .title{
+    font-family: $dm;
+    font-size: 20px;
+    color: #FFFFFF;
+    letter-spacing: 0;
+  }
+
+  .category{
+    font-family: $dl;
+    text-transform: uppercase;
+    font-size: 11px;
+    color: #F0827D;
+    letter-spacing: 0;
+    margin-bottom:15px;
+  }
+
+  .socials{
+    a{
+      display:inline-block;
+      width:22px;
+      height:22px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.10);
+      color:#fff;
+      text-align:center;
+      font-size:10px;
+      line-height:26px;
+      margin-right:10px;
+      @include transition(500ms all ease-in-out);
+
+      &:hover{
+        background-color:$red;
+      }
+    }
+  }
+}

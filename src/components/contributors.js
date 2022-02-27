@@ -7,7 +7,7 @@ const responsive = {
     desktop: {
         breakpoint: { max: 3000, min: 1024 },
         items: 2,
-        paritialVisibilityGutter: 60
+        paritialVisibilityGutter: 0
     },
     tablet: {
         breakpoint: { max: 1024, min: 464 },
@@ -28,6 +28,7 @@ const Contributors = ({ deviceType }) => {
         <Carousel
             ssr
             partialVisbile
+            autoPlay={false}
             deviceType={deviceType}
             itemClass="image-item"
             responsive={responsive}

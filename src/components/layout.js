@@ -2,8 +2,10 @@ import React from "react"
 import Footer from "./footer";
 import Header from "./header";
 import {Helmet} from "react-helmet";
+import { ParallaxProvider } from 'react-scroll-parallax';
 
 export default function Layout({ children }) {
+
     return (
         <div>
             <Helmet>
@@ -12,8 +14,12 @@ export default function Layout({ children }) {
                         crossOrigin="anonymous" async></script>
             </Helmet>
             <Header/>
-            {children}
-            <Footer/>
+            <ParallaxProvider>
+                <main>
+                    {children}
+                    <Footer/>
+                </main>
+            </ParallaxProvider>
         </div>
     )
 }
