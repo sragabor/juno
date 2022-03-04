@@ -1,10 +1,46 @@
-import React from "react";
-import EcosystemVideo from "../videos/ecosystem.mp4";
+import React, {useEffect} from "react";
+import {isMobile} from 'react-device-detect';
+
+import EcosystemVideo from "../videos/ecosystem.webm";
+import EcosystemPoster from "../videos/ecosystem.png";
+import EcosystemVideoMov from "../videos/ecosystem.mp4";
 
 const menu = require('../contents/urls.json');
 
-class EcosystemSection extends React.Component {
-    render() {
+const EcosystemSection = () => {
+
+        /*useEffect(() => {
+            console.log('OK');
+                var isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+                var Mobile = false;
+
+                if (isMobile) {
+                    Mobile = true;
+                }
+
+                if(isSafari && Mobile){
+                    const videoElement = document.getElementById('ecosystem-video');
+                    const videoElementBG = document.getElementById('video-bg');
+                    videoElement.addEventListener('suspend', () => {
+                        console.log('suspend');
+                        videoElement.style.display = "none"
+                        videoElementBG.style.display = "block"
+                        // suspend invoked
+                        // show play button
+                        // iphone is in low power mode
+                    });
+
+                    videoElement.addEventListener('play', () => {
+                        console.log('play');
+                        videoElement.style.display = "block"
+                        videoElementBG.style.display = "none"
+                        // video is played
+                        // remove play button UI
+                        // iphone is not in low power mode
+                    });
+            }
+        });*/
+
         return (
             <section className={'ecosystem-section'}>
                 <div className={'container'}>
@@ -12,8 +48,10 @@ class EcosystemSection extends React.Component {
                         <div className={'col-12 col-md-6'}>
                             <div className={'video-container'}>
                                 <div className={'video-wrapper'}>
-                                    <video autoPlay={true} loop={true} playsInline={true} muted={true}>
-                                        <source src={EcosystemVideo} type="video/mp4" />
+                                    <div id={'video-bg'}/>
+                                    <video id={'ecosystem-video'} autoPlay={true} loop={true} playsInline={true} muted={true} poster={EcosystemPoster}>
+                                        <source src={EcosystemVideoMov} type='video/mp4;codecs="hvc1"'/>
+                                        <source src={EcosystemVideo} type="video/webm" />
                                     </video>
                                 </div>
                             </div>
@@ -24,7 +62,7 @@ class EcosystemSection extends React.Component {
                                     data-sal-duration="1000">ECOSYSTEM</legend>
                             <h3 data-sal="fade"
                                  data-sal-delay="200"
-                                 data-sal-duration="1000">47 apps, contracts, tools and 1400 DAO's built on Juno</h3>
+                                 data-sal-duration="1000">50+ apps, contracts, tools and 2000+ DAO's built on Juno</h3>
                             <div className={'text-box'} data-sal="fade"
                                  data-sal-delay="600"
                                  data-sal-duration="1000">
@@ -40,7 +78,7 @@ class EcosystemSection extends React.Component {
                 </div>
             </section>
         );
-    }
 }
 
 export default EcosystemSection;
+

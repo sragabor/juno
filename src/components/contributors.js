@@ -10,14 +10,12 @@ const responsive = {
         paritialVisibilityGutter: 0
     },
     tablet: {
-        breakpoint: { max: 1024, min: 464 },
+        breakpoint: { max: 1024, min: 640 },
         items: 2,
-        paritialVisibilityGutter: 50
     },
     mobile: {
-        breakpoint: { max: 464, min: 0 },
+        breakpoint: { max: 640, min: 0 },
         items: 1,
-        paritialVisibilityGutter: 30
     }
 };
 
@@ -27,15 +25,16 @@ const Contributors = ({ deviceType }) => {
     return (
         <Carousel
             ssr
-            partialVisbile
+            partialVisible
             autoPlay={false}
             deviceType={deviceType}
             itemClass="image-item"
+            shouldResetAutoplay={false}
             responsive={responsive}
         >
-            {contributors.map(contributor => {
+            {contributors.map((contributor,index) => {
                 return (
-                    <div className={'contributor'}
+                    <div className={'contributor'} key={index}
                         draggable={false}
                     >
                         <div className={'name'}>{contributor.name}</div>

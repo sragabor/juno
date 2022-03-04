@@ -24,17 +24,17 @@ class HackSection extends React.Component {
                                  data-sal-delay="400"
                                  data-sal-duration="1000">
                                 <p>
-                                    The Moneta Hacks are the largest incentivised smart contract challenges in the world. Kickoff will be the completion of the Juno-1 main-net upgrade to support Cosmwasm.
+                                    The Moneta Hacks are the largest incentivised smart contract challenges in the world.
                                 </p>
                                 <p>
-                                    Finally developers from across the world may deploy smart contracts onto the permission-less interoperable smart contract base layer called Juno.
+                                    Developers from across the world may deploy smart contracts onto the permission-less interoperable smart contract base layer called Juno.
                                 </p>
                             </div>
                             <a href={menu["hacks-and-bounties"]}>
                                 <div className={'link'}><i className={'icon-arrow-right'}></i> Learn more</div>
                             </a>
                         </div>
-                        <div className={'col-12 col-md-6 ps-md-5'}>
+                        <div className={'col-12 col-md-6 pt-5 pt-md-0 ps-md-5'}>
                             <div className={'row'}>
                                 <div className={'col-12 col-sm-6'}>
                                     <div className={'bounty first'}>
@@ -66,7 +66,7 @@ class HackSection extends React.Component {
                                         </div>
                                         <div className={'title'}>Gaming/Gamification</div>
                                         <div className={'text-box'}>
-                                            Marketplaces, Inter NFT applications & inter-nft standard improvements.
+                                            Metaverse - Creation of digital worlds, games and gamification
                                         </div>
                                     </div>
                                 </div>
@@ -83,7 +83,7 @@ class HackSection extends React.Component {
                                         </div>
                                         <div className={'title'}>Non Fungible Tokens</div>
                                         <div className={'text-box'}>
-                                            Privacy preserving protocols on Juno
+                                            Marketplaces, Inter NFT applications & inter-nft standard improvements.
                                         </div>
                                     </div>
                                 </div>
@@ -100,7 +100,7 @@ class HackSection extends React.Component {
                                         </div>
                                         <div className={'title'}>Privacy</div>
                                         <div className={'text-box'}>
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                            Privacy preserving protocols on Juno
                                         </div>
                                     </div>
                                 </div>
@@ -108,7 +108,7 @@ class HackSection extends React.Component {
                         </div>
                     </div>
 
-                    <div className={'row pt-5 align-items-top'}>
+                    <div className={'row pt-md-5 align-items-top'}>
                         <div className={'col-12 col-md-6 pe-md-5'}>
                             <Parallax translateY={['20%', '0%']}>
                                 <StaticImage
@@ -132,9 +132,9 @@ class HackSection extends React.Component {
                             </a>
 
                             <div className={'row mt-4'}>
-                                <div className={'col-6'}>
+                                <div className={'col-12 col-sm-6'}>
                                     <div className={'feature'}>
-                                        <div className={'image ms-n5 mb-2'}>
+                                        <div className={'image ms-md-n5 mb-2'}>
                                             <StaticImage
                                                 src={'../images/speed.png'}
                                                 alt={'Speed'}
@@ -144,12 +144,12 @@ class HackSection extends React.Component {
                                             />
                                         </div>
                                         <div className={'title'}>Speed</div>
-                                        <div className={'text-box'}>Built on the Cosmos SDK ensures high throughput and fast contract execution</div>
+                                        <div className={'text-box'}>Utilizing the Cosmos SDK & Tendermint Consensus to ensure high throughput and fast contract execution</div>
                                     </div>
                                 </div>
-                                <div className={'col-6'}>
+                                <div className={'col-12 col-sm-6'}>
                                     <div className={'feature align-top'}>
-                                        <div className={'image mb-4 ms-n4'}>
+                                        <div className={'image mb-4 ms-md-n4'}>
                                             <StaticImage
                                                 src={'../images/cost.png'}
                                                 alt={'Cost'}
@@ -162,9 +162,9 @@ class HackSection extends React.Component {
                                         <div className={'text-box'}>Low cost deployment up to 35000 times cheaper than gen 2 blockchain networks</div>
                                     </div>
                                 </div>
-                                <div className={'col-6'}>
+                                <div className={'col-12 col-sm-6'}>
                                     <div className={'feature'}>
-                                        <div className={'image mb-4 ms-n3'}>
+                                        <div className={'image mb-4 ms-md-n3'}>
                                             <StaticImage
                                                 src={'../images/interoperability.png'}
                                                 alt={'Interoperability'}
@@ -177,9 +177,9 @@ class HackSection extends React.Component {
                                         <div className={'text-box'}>Deployment on Juno and interoperable with all networks in the cosmos ecosystem via IBC</div>
                                     </div>
                                 </div>
-                                <div className={'col-6'}>
+                                <div className={'col-12 col-sm-6'}>
                                     <div className={'feature align-top'}>
-                                        <div className={'image mb-5 ms-n2'}>
+                                        <div className={'image mb-5 ms-md-n2'}>
                                             <StaticImage
                                                 src={'../images/smart-contracts.png'}
                                                 alt={'Smart Contracts'}

@@ -14,5 +14,29 @@
   "discord": "Discord",
   "twitter": "Twitter",
   "telegram": "Telegram"
+},{
+  "icon": "citadel-one.png",
+  "title": "JunoMint",
+  "category": "Contracts",
+  "github": "Github,",
+  "discord": "Discord",
+  "twitter": "Twitter",
+  "telegram": "Telegram"
+},{
+  "icon": "citadel-one.png",
+  "title": "JunoSwap DEX",
+  "category": "Contracts",
+  "github": "Github,",
+  "discord": "Discord",
+  "twitter": "Twitter",
+  "telegram": "Telegram"
+},{
+  "icon": "citadel-one.png",
+  "title": "JunoDapp",
+  "category": "Dao",
+  "github": "Github,",
+  "discord": "Discord",
+  "twitter": "Twitter",
+  "telegram": "Telegram"
 }
 ]

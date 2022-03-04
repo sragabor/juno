@@ -4,6 +4,12 @@ import {Link} from "gatsby";
 const menu = require('../contents/urls.json');
 
 class Header extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            menuOpen: false
+        };
+    }
     componentDidMount() {
         window.addEventListener("scroll", this.toggleHeaderClass);
         this.toggleHeaderClass();
@@ -12,22 +18,25 @@ class Header extends React.Component {
         document.getElementById('menu').classList.toggle('open');
     }
     toggleHeaderClass = () => {
-        if (window.scrollY > 100) {
-            document.getElementById("header").classList.add("blur");
-        } else {
-            document.getElementById("header").classList.remove("blur");
+        if(!document.getElementById("header").classList.contains('menu-opened')){
+            if (window.scrollY > 100) {
+                document.getElementById("header").classList.add("blur");
+            } else {
+                document.getElementById("header").classList.remove("blur");
+            }
         }
     };
     render() {
         return (
-            <header id={'header'}>
+            <header id={'header'} className={this.state.menuOpen ? 'menu-opened blur' : 'blur'}>
+                <div className={'header-bg'}/>
                 <div className={'container'}>
                     <Link to={'/'}>
                         <div className={'logo'}>
                             <svg width="140px" height="50px" viewBox="0 0 140 50" version="1.1" xmlns="http://www.w3.org/2000/svg">
                                 <g id="Symbols" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
                                     <g id="Group" fill="#FFFFFF" transform="translate(-0.000000, 0.000000)">
-                                        <path d="M49.9018416,24.9509208 C49.9018416,38.7311351 38.7309458,49.9018416 24.9509208,49.9018416 C11.1708959,49.9018416 1.42108547e-14,38.7311351 1.42108547e-14,24.9509208 C1.42108547e-14,11.1708959 11.1708959,0 24.9509208,0 C38.7309458,0 49.9018416,11.1708959 49.9018416,24.9509208" id="Fill-1" fill-opacity="0.1"></path>
+                                        <path d="M49.9018416,24.9509208 C49.9018416,38.7311351 38.7309458,49.9018416 24.9509208,49.9018416 C11.1708959,49.9018416 1.42108547e-14,38.7311351 1.42108547e-14,24.9509208 C1.42108547e-14,11.1708959 11.1708959,0 24.9509208,0 C38.7309458,0 49.9018416,11.1708959 49.9018416,24.9509208" id="Fill-1" fillOpacity="0.1"></path>
                                         <polygon id="Fill-3" points="35.2761068 18.717137 28.6771017 18.4438267 33.1587091 13.5901084 31.3555047 11.786904 26.4962975 16.2596156 26.2330187 9.65852842 23.6825642 9.65852842 23.4094432 16.2573443 18.5559142 11.7757368 16.7523312 13.5791305 21.2252321 18.4383377 14.6239557 18.7016166 14.6239557 21.2518817 21.2229608 21.525192 16.7413534 26.3789103 18.5447471 28.1824933 23.3291914 23.7781092 23.5373918 34.4684408 19.7207006 34.7476186 19.7207006 37.1228062 23.5949308 37.4169365 23.6672331 41.1300953 26.2174983 41.1300953 26.2924504 37.4224254 30.207185 37.125456 30.207185 34.7502684 26.3522607 34.4682515 26.5682212 23.7832196 31.3443376 28.1932819 33.1481098 26.3898882 28.6750196 21.530681 35.2761068 21.2674021"></polygon>
                                         <path d="M91.2289892,34.6796128 C90.2805419,35.2215015 89.1288153,35.4927298 87.7399296,35.4927298 C84.4543386,35.4927298 82.8669055,33.5943211 82.1849547,31.6989407 C81.6546116,30.2250714 81.6430659,29.24123 81.6430659,28.4283022 L81.6430659,18.2512792 L86.418993,18.2512792 L86.418993,28.2098811 C86.418993,29.8698058 87.4352,31.3601419 89.4337342,31.3601419 C91.4661483,31.3601419 92.8887246,29.9373763 92.8887246,28.4133496 L92.8887246,18.2173993 L97.6309611,18.2173993 L97.6309611,35.0184115 L93.5085939,35.0184115 L93.0242441,32.9523068 C92.787085,33.5280755 92.2113163,34.1038441 91.2289892,34.6796128" id="Fill-5"></path>
                                         <path d="M105.61412,18.3191525 L106.167365,20.6901761 C107.352972,18.9965608 108.775548,18.0481135 110.469163,17.8448342 C113.754944,17.438465 116.024328,18.8949211 116.972775,20.8256956 C117.480784,21.8757825 117.717943,23.6710375 117.717943,26.2114605 L117.717943,35.0185251 L113.145106,35.0185251 L113.145106,26.0081812 C113.145106,23.0275091 112.298109,21.8757825 109.723995,21.8757825 C108.064071,21.8757825 106.404524,23.6371576 106.404524,26.6517096 L106.404524,35.0185251 L101.831687,35.0185251 L101.831687,18.3191525 L105.61412,18.3191525 Z" id="Fill-7"></path>
@@ -39,13 +48,19 @@ class Header extends React.Component {
                         </div>
                     </Link>
 
+                    <button className={this.state.menuOpen ? 'hamburger hamburger--slider is-active' : 'hamburger hamburger--slider'} type="button" onClick={() => this.setState({ menuOpen: !this.state.menuOpen })}>
+                          <span className="hamburger-box">
+                            <span className="hamburger-inner"/>
+                          </span>
+                    </button>
+
                     <nav>
                         <ul>
                             <li><Link to={menu.docs}>Docs</Link></li>
                             <li><Link to={menu.blog}>Blog</Link></li>
                             <li><Link to={menu.updates}>Updates</Link></li>
-                            <li className={'social'}><a href={menu.github} target={'_blank'} rel={'noreferrer'}><i className={'icon-social-github'}></i></a></li>
-                            <li className={'social'}><a href={menu.discord} target={'_blank'} rel={'noreferrer'}><i className={'icon-social-discord'}></i></a></li>
+                            <li className={'social'}><a href={menu.github} target={'_blank'} rel={'noreferrer'}><i className={'icon-social-github'} aria-label={'Github'}></i></a></li>
+                            <li className={'social'}><a href={menu.discord} target={'_blank'} rel={'noreferrer'}><i className={'icon-social-discord'} aria-label={'Discord'}></i></a></li>
                         </ul>
                     </nav>
                 </div>

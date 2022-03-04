@@ -17,7 +17,14 @@ module.exports = {
         options: {
             "icon": "src/images/icon.png"
         }
-    }, "gatsby-plugin-mdx", "gatsby-transformer-remark", "gatsby-plugin-sharp", "gatsby-transformer-sharp", {
+    }, "gatsby-plugin-mdx", "gatsby-transformer-remark", `gatsby-plugin-sharp`,
+        {
+            resolve: `gatsby-transformer-sharp`,
+            options: {
+                // The option defaults to true
+                checkSupportedExtensions: false,
+            },
+        }, {
         resolve: 'gatsby-source-filesystem',
         options: {
             "name": "images",

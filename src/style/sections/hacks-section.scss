@@ -2,6 +2,10 @@
   padding:200px 0 160px;
   position: relative;
 
+  @include media-breakpoint-down(sm){
+    padding:100px 0;
+  }
+
   .bg{
     background:url(../images/hack-section-bg.png) no-repeat scroll left top transparent;
     background-size:contain;
@@ -11,6 +15,13 @@
     width:50%;
     bottom:0;
     top:0;
+
+    @include media-breakpoint-down(md){
+      width:100%;
+    }
+    @include media-breakpoint-down(sm){
+      width:200%;
+    }
   }
 
   .bounty{
@@ -38,6 +49,10 @@
       letter-spacing: 0;
       line-height: 20px;
       margin-bottom:10px;
+
+      @include media-breakpoint-down(sm){
+        font-size:20px;
+      }
     }
   }
 
@@ -45,15 +60,29 @@
     padding-top:120px;
     padding-right:68px;
 
+    @include media-breakpoint-down(sm){
+      padding-right:0;
+      padding-top:60px;
+    }
+
     &.align-top{
       padding-top:0;
       padding-right:0;
       padding-left:68px;
+
+      @include media-breakpoint-down(sm){
+        padding-left:0;
+        padding-top:60px;
+      }
     }
 
     .image{
       .gatsby-image-wrapper{
         height:100%;
+      }
+
+      @include media-breakpoint-down(sm){
+        max-width:130px;
       }
     }
 

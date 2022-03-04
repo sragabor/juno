@@ -7,5 +7,14 @@
   "get-started": "/get-started",
   "ecosystem": "/ecosystem",
   "hacks-and-bounties": "/hacks-and-bounties",
-  "start-searching": "/start-searching"
+  "start-searching": "/start-searching",
+  "telegram": "/telegram",
+  "twitter": "/twitter",
+  "coingecko": "/coingecko",
+  "coinmarketcap": "/coinmarketcap",
+  "osmosis": "/osmosis",
+  "onchain": "/onchain",
+  "keplr": "/keplr",
+  "cosmostation": "/cosmostation",
+  "status": "/status"
 }

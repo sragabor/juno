@@ -1,5 +1,7 @@
 import React from "react";
-import HeroVideo from "../videos/hero.mp4";
+import HeroVideoMov from "../videos/hero.mp4";
+import HeroVideo from "../videos/hero.webm";
+import HeroVideoPoster from "../videos/hero.png"
 
 const menu = require('../contents/urls.json');
 
@@ -10,8 +12,10 @@ class HeroSection extends React.Component {
             <section className={'hero-section'}>
                 <div className={'video-container'}>
                     <div className={'video-wrapper'}>
-                        <video autoPlay={true} loop={true} playsInline={true} muted={true}>
-                            <source src={HeroVideo} type="video/mp4" />
+                        <div className={'video-bg'}/>
+                        <video id={'hero-video'} autoPlay={true} loop={true} playsInline={true} muted={true} poster={HeroVideoPoster}>
+                            <source src={HeroVideoMov} type='video/mp4;codecs="hvc1"'/>
+                            <source src={HeroVideo} type="video/webm" />
                         </video>
                     </div>
                 </div>
