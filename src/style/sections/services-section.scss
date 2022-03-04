@@ -114,6 +114,11 @@
       padding-right:18px;
       margin-top:165px;
 
+      @include media-breakpoint-down(sm){
+        padding-right:0;
+        margin-top:100px;
+      }
+
       &:before,&:after{
         width:200px;
         height:200px;
@@ -137,6 +142,10 @@
 
       .inner{
         padding-top:125px;
+
+        @include media-breakpoint-down(sm){
+          padding-top:100px;
+        }
       }
     }
 
