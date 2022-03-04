@@ -1,7 +1,7 @@
 import React from "react";
-import PiechartVideoMov from "../videos/pieChart.mp4";
-import PiechartVideo from "../videos/pieChart.webm";
-import PiechartPoster from "../videos/pieChart.png"
+import PiechartVideoMov from "../videos/piechart.mp4";
+import PiechartVideo from "../videos/piechart.webm";
+import PiechartPoster from "../videos/piechart.png"
 
 class PiechartSection extends React.Component {
     render() {
