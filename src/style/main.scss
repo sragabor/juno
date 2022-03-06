@@ -64,12 +64,13 @@ section{
       width:55%;
       z-index:1;
       right:-50px;
-      bottom:5%;
+      top:50%;
 
       @include media-breakpoint-down(md){
         width:100%;
         right:0;
         position:relative;
+        top:unset;
       }
 
       .video-wrapper{
@@ -90,6 +91,7 @@ section{
           right:0;
           width:155%;
           top:0;
+          background:none;
 
           @include media-breakpoint-down(md){
             width:100%;

@@ -5,18 +5,31 @@ const contributors = require('../contents/contributors.json');
 
 const responsive = {
     desktop: {
-        breakpoint: { max: 3000, min: 1024 },
-        items: 2,
-        paritialVisibilityGutter: 0
+        breakpoint: { max: 3000, min: 768 },
+        items: 4,
+    },
+    laptop: {
+        breakpoint: { max: 1024, min: 768 },
+        items: 3,
     },
     tablet: {
-        breakpoint: { max: 1024, min: 640 },
+        breakpoint: { max: 768, min: 440 },
         items: 2,
     },
     mobile: {
-        breakpoint: { max: 640, min: 0 },
+        breakpoint: { max: 440, min: 0 },
         items: 1,
     }
+};
+
+const ButtonGroup = ({ next, previous, goToSlide, ...rest }) => {
+    const { carouselState: { currentSlide } } = rest;
+    return (
+        <div className="carousel-button-group">
+            <button className={currentSlide === 0 ? 'left-arrow disable' : 'left-arrow'} onClick={() => previous()} aria-label={'Previous'} />
+            <button className={'right-arrow'} onClick={() => next()} aria-label={'Next'} />
+        </div>
+    );
 };
 
 // Because this is an inframe, so the SSR mode doesn't not do well here.
@@ -31,6 +44,8 @@ const Contributors = ({ deviceType }) => {
             itemClass="image-item"
             shouldResetAutoplay={false}
             responsive={responsive}
+            renderButtonGroupOutside={true}
+            arrows={false} customButtonGroup={<ButtonGroup />}
         >
             {contributors.map((contributor,index) => {
                 return (

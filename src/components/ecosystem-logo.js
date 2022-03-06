@@ -25,6 +25,7 @@ const EcosystemLogo = props => (
     `}
         render={data => {
             // Handles SVG extension
+
             const extension = props.filename.match(/[^\\]*\.(\w+)$/)[1]
 
             const image = data.images.edges.find(n => {
@@ -41,7 +42,7 @@ const EcosystemLogo = props => (
 
 
             //const imageSizes = image.node.childImageSharp.sizes; sizes={imageSizes}
-            return <GatsbyImage image={image.node.childImageSharp.gatsbyImageData} imgStyle={{objectFit: 'contain', aspectRatio: 1, height: 36, width: 'auto'}} />;
+            return <GatsbyImage image={image.node.childImageSharp.gatsbyImageData} imgStyle={{}} />;
         }}
     />
 );

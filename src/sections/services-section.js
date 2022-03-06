@@ -149,22 +149,23 @@ export function ServicesSection() {
                     </div>
 
                     <div className={'row contributors align-items-center'}>
-                        <div className={'col-12 col-md-5'}>
-                            <h3>
-                                Core <br/>
-                                Contributors
-                            </h3>
-
-                            <div className={'row mt-0 mt-lg-4'}>
+                        <div className={'col-12'}>
+                            <div className={'row justify-content-between align-items-center'}>
                                 <div className={'col-auto'}>
-                                    <a href={menu.cosmostation} >
-                                        <div className={'link'}><i className={'icon-arrow-right'} aria-label={'View all'}></i>View all</div>
-                                    </a>
+                                    <h3>
+                                        Core <br/>
+                                        Contributors
+                                    </h3>
                                 </div>
                             </div>
                         </div>
-                        <div className={'col-12 col-md-7'}>
+                        <div className={'col-12 pt-4'}>
                             <Contributors/>
+                        </div>
+                        <div className={'col-12 pt-4'}>
+                            <a href={menu.cosmostation} >
+                                <div className={'link'}><i className={'icon-arrow-right'} aria-label={'View all'}></i>View all</div>
+                            </a>
                         </div>
                     </div>
 

@@ -61,7 +61,7 @@ class PiechartSection extends React.Component {
                         </div>
                     </div>
                 </div>
-                <div className={'col-12 col-md-5'}>
+                <div className={'col-12 col-md-5 pt-5 pt-md-0'}>
                     <h3>Token Economics</h3>
                     <div className={'text-box'}>
                         <p>Juno is a completely community owned and operated smart contract platform.</p>

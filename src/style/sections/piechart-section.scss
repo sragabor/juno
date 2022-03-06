@@ -1,7 +1,11 @@
 .piechart{
   padding-top:130px;
 
-  .video-container{
+  @include media-breakpoint-down(sm){
+    padding-top:100px;
+  }
+
+    .video-container{
     width:100%;
 
     .video-wrapper{
@@ -25,14 +29,18 @@
           letter-spacing: 0;
           z-index:2;
 
+          @include media-breakpoint-down(sm){
+            font-size:14px;
+          }
+
           span{
-            font-size:18px;
+            font-size:1.5em;
             display:block;
             font-family: $dsb;
           }
 
           em{
-            font-size:12px;
+            font-size:1em;
             font-style: normal;
             font-family:$dl;
             display:block;
@@ -64,6 +72,12 @@
               bottom:-7px;
               right:30px;
             }
+
+            @include media-breakpoint-down(sm){
+              transform:scale(.7);
+              transform-origin: left top;
+            }
+
           }
 
           &.text2{
@@ -89,6 +103,11 @@
               position:absolute;
               bottom:-7px;
               left:5px;
+            }
+
+            @include media-breakpoint-down(sm){
+              transform:scale(.7);
+              transform-origin: right top;
             }
           }
 
@@ -116,6 +135,11 @@
               bottom:-7px;
               left:5px;
             }
+
+            @include media-breakpoint-down(sm){
+              transform:scale(.7);
+              transform-origin: right top;
+            }
           }
 
           &.text4{
@@ -142,6 +166,11 @@
               top:-7px;
               left:5px;
             }
+
+            @include media-breakpoint-down(sm){
+              transform:scale(.7);
+              transform-origin: right bottom;
+            }
           }
 
           &.text5{
@@ -167,6 +196,11 @@
               position:absolute;
               top:-7px;
               left:5px;
+            }
+
+            @include media-breakpoint-down(sm){
+              transform:scale(.7);
+              transform-origin: left bottom;
             }
           }
         }

@@ -4,11 +4,24 @@
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   width:100%;
+  height:100%;
   padding:20px;
 
   .icon{
     height:36px;
+    width:36px;
+    border-radius:50%;
+    overflow:hidden;
     margin-bottom:10px;
+    position:relative;
+
+    .gatsby-image-wrapper{
+      position:absolute;
+      left:0;
+      top:0;
+      width:100% !important;
+      height:100% !important;
+    }
   }
 
   .title{
@@ -16,6 +29,17 @@
     font-size: 20px;
     color: #FFFFFF;
     letter-spacing: 0;
+  }
+
+  .text{
+    font-family: $gv;
+    font-weight:normal;
+    font-size: 14px;
+    color: #E9D6D6;
+    letter-spacing: 0.26px;
+    line-height: 18px;
+    margin-top:15px;
+    margin-bottom:20px;
   }
 
   .category{

@@ -16,5 +16,6 @@
   "onchain": "/onchain",
   "keplr": "/keplr",
   "cosmostation": "/cosmostation",
-  "status": "/status"
+  "status": "/status",
+  "daolink": "/daolink"
 }
