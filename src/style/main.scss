@@ -60,6 +60,7 @@ section{
 
   .hero-section{
     overflow:hidden;
+
     .video-container{
       width:55%;
       z-index:1;
@@ -68,7 +69,7 @@ section{
 
       @include media-breakpoint-down(md){
         width:100%;
-        right:0;
+        right:unset;
         position:relative;
         top:unset;
       }
@@ -79,7 +80,7 @@ section{
         position: relative;
 
         @include media-breakpoint-down(md){
-          padding-top:56%;
+          padding-top:47%;
         }
 
         @include media-breakpoint-down(sm){
@@ -91,10 +92,12 @@ section{
           right:0;
           width:155%;
           top:0;
+          left:unset;
           background:none;
 
           @include media-breakpoint-down(md){
             width:100%;
+            transform:none;
           }
           @include media-breakpoint-down(sm){
             width:150%;
@@ -117,6 +120,18 @@ section{
       & > .row{
         z-index:2;
         position: relative;
+
+        @include media-breakpoint-down(md){
+          margin-top:-100px;
+        }
+      }
+
+      @include media-breakpoint-down(md){
+        margin-top:0;
+        padding-top:100px;
+      }
+      @include media-breakpoint-down(md){
+        padding-bottom:50px;
       }
     }
   }

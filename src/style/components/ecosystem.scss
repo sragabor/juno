@@ -68,6 +68,10 @@
       &:hover{
         background-color:$red;
       }
+
+      @include media-breakpoint-down(sm){
+        margin-right:5px;
+      }
     }
   }
 }

@@ -122,7 +122,7 @@ export function ServicesSection() {
                                     <div className={'col-1'}>
                                         <i className={'icon-hash'}></i>
                                     </div>
-                                    <div className={'col-11'}>
+                                    <div className={'col-10'}>
                                         Swap
                                     </div>
                                 </div>
@@ -131,7 +131,7 @@ export function ServicesSection() {
                                     <div className={'col-1'}>
                                         <i className={'icon-transfer'}></i>
                                     </div>
-                                    <div className={'col-11'}>
+                                    <div className={'col-10'}>
                                         Transfer
                                     </div>
                                 </div>
@@ -140,7 +140,7 @@ export function ServicesSection() {
                                     <div className={'col-1'}>
                                         <i className={'icon-liquidity'}></i>
                                     </div>
-                                    <div className={'col-11'}>
+                                    <div className={'col-10'}>
                                         Liquidity
                                     </div>
                                 </div>

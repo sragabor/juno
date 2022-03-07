@@ -12,6 +12,8 @@
       padding-top:86%;
       width:100%;
       position: relative;
+      min-width:600px;
+
 
       video{
         position:absolute;
@@ -31,6 +33,10 @@
 
           @include media-breakpoint-down(sm){
             font-size:14px;
+
+            &:before,&:after{
+              display:none;
+            }
           }
 
           span{
@@ -81,7 +87,7 @@
           }
 
           &.text2{
-            right:60px;
+            right:40px;
             top:0;
 
             &:before{
