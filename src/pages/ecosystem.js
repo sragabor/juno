@@ -67,7 +67,7 @@ const EcosystemPage = (props) => {
                     </div>
                 </section>
 
-                <section id={'browse'} className={'search-section pt-5 mt-4 mt-lg-5'}>
+                <section id={'browse'} className={'search-section mt-4 mt-lg-5'}>
                     <div className={'container'}>
                         <div className={'row justify-content-between'}>
                             <div className={'col-auto'}>

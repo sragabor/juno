@@ -9,7 +9,7 @@ const Ecosystem = (props) => {
             </div>
             <div className={'title'}>{props.ecosystem.title}</div>
             <div className={'category'}>{props.category ? props.category : props.ecosystem.category}</div>
-            <div className={'text'}>{props.ecosystem.featured && props.ecosystem.text}</div>
+
 
             <div className={'socials'}>
                 {props.ecosystem.website && <a href={props.ecosystem.website} target={'_blank'} rel={'noreferrer'}><i className={'icon-website'} aria-label={'Website'}></i></a>}
@@ -18,6 +18,8 @@ const Ecosystem = (props) => {
                 {props.ecosystem.twitter && <a href={props.ecosystem.twitter} target={'_blank'} rel={'noreferrer'}><i className={'icon-social-twitter'} aria-label={'Twitter'}></i></a>}
                 {props.ecosystem.telegram && <a href={props.ecosystem.telegram} target={'_blank'} rel={'noreferrer'}><i className={'icon-social-telegram'} aria-label={'Telegram'}></i></a>}
             </div>
+
+            <div className={'text'}>{props.ecosystem.featured && props.ecosystem.text}</div>
         </div>
     );
 };
