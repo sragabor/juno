@@ -14,7 +14,7 @@ class HeroSection extends React.Component {
                 <div className={'video-container'}>
                     <div className={'video-wrapper'}>
                         <div className={'video-bg'}/>
-                        <video id={'hero-video'} autoPlay={true} loop={true} playsInline={true} muted={true} poster={HeroVideoPoster}>
+                        <video id={'hero-video'} autoPlay={true} preload={'none'} loop={true} playsInline={true} muted={true} poster={HeroVideoPoster}>
                             <source src={HeroVideoMov} type='video/mp4;codecs="hvc1"'/>
                             <source src={HeroVideo} type="video/webm" />
                         </video>

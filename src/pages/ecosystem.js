@@ -34,7 +34,7 @@ const EcosystemPage = (props) => {
                         <div className={'video-container'}>
                             <div className={'video-wrapper'}>
                                 <div className={'video-bg'}/>
-                                <video autoPlay={true} loop={true} playsInline={true} muted={true} poster={EcosystemPoster}>
+                                <video autoPlay={true} loop={true} preload={'none'} playsInline={true} muted={true} poster={EcosystemPoster}>
                                     <source src={EcosystemVideoMov} type='video/mp4;codecs="hvc1"'/>
                                     <source src={EcosystemVideo} type="video/webm" />
                                 </video>

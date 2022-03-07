@@ -16,7 +16,7 @@ const EcosystemSection = () => {
                             <div className={'video-container'}>
                                 <div className={'video-wrapper'}>
                                     <div id={'video-bg'}/>
-                                    <video id={'ecosystem-video'} autoPlay={true} loop={true} playsInline={true} muted={true} poster={EcosystemPoster}>
+                                    <video id={'ecosystem-video'} autoPlay={true} preload={'none'} loop={true} playsInline={true} muted={true} poster={EcosystemPoster}>
                                         <source src={EcosystemVideoMov} type='video/mp4;codecs="hvc1"'/>
                                         <source src={EcosystemVideo} type="video/webm" />
                                     </video>
