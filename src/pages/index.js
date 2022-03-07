@@ -9,7 +9,6 @@ import HackSection from "../sections/hacks-section";
 const IndexPage = () => {
     return (
         <div>
-            <title>Juno - Home Page</title>
             <Layout>
                 <HeroSection/>
                 <EcosystemSection/>

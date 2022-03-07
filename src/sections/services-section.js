@@ -14,7 +14,10 @@ export function ServicesSection() {
                 <div className={'container'}>
                     <div className={'row'} data-masonry='{"percentPosition": true }'>
                         <div className={'col-12 col-sm-6'}>
-                            <div className={'service cosmostation'}>
+                            <div className={'service cosmostation'}
+                                 data-sal="slide-up"
+                                 data-sal-delay="200"
+                                 data-sal-duration="1000">
                                 <div className={'inner'}>
                                     <div className={'title'}>Cosmostation Wallet</div>
                                     <div className={'row'}>
@@ -33,7 +36,10 @@ export function ServicesSection() {
                             </div>
                         </div>
                         <div className={'col-12 col-sm-6'}>
-                            <div className={'service staking-juno'}>
+                            <div className={'service staking-juno'}
+                                 data-sal="slide-up"
+                                 data-sal-delay="200"
+                                 data-sal-duration="1000">
                                 <div className={'inner'}>
                                     <div className={'title'}>Staking Juno</div>
                                     <div className={'text-box'}>
@@ -55,7 +61,10 @@ export function ServicesSection() {
                             </div>
                         </div>
                         <div className={'col-12 col-sm-6'}>
-                            <div className={'service keplr-wallet'}>
+                            <div className={'service keplr-wallet'}
+                                 data-sal="slide-up"
+                                 data-sal-delay="200"
+                                 data-sal-duration="1000">
                                 <div className={'inner'}>
                                     <div className={'title'}>Keplr wallet</div>
                                     <div className={'row'}>
@@ -88,11 +97,22 @@ export function ServicesSection() {
                             </div>
                         </Parallax>
                         <div className={'col-12 col-md-12 col-lg-5 pe-lg-4 z-index-front'}>
-                            <h3>Easy access to JunoSwap and Osmosis</h3>
-                            <div className={'text-box pe-5'}>
+                            <h3
+                                data-sal="fade"
+                                data-sal-delay="200"
+                                data-sal-duration="1000">
+                                Easy access to JunoSwap and Osmosis
+                            </h3>
+                            <div className={'text-box pe-5'}
+                                 data-sal="fade"
+                                 data-sal-delay="400"
+                                 data-sal-duration="1000">
                                 Swap & LP your Juno on the largest Cosmos decentralized exchanges.
                             </div>
-                            <div className={'row mt-4'}>
+                            <div className={'row mt-4'}
+                                 data-sal="fade"
+                                 data-sal-delay="600"
+                                 data-sal-duration="1000">
                                 <div className={'col-auto'}>
                                     <a href={menu.junoswap} target={'_blank'} rel={'noreferrer'}>
                                         <button type={'button'}>Enter JunoSwap</button>
@@ -106,7 +126,10 @@ export function ServicesSection() {
                             </div>
                         </div>
                         <div className={'col-12 col-md-12 col-lg-7 ps-lg-5'}>
-                            <div className={'junoswap-box'}>
+                            <div className={'junoswap-box'}
+                                 data-sal="fade"
+                                 data-sal-delay="400"
+                                 data-sal-duration="1000">
                                 <StaticImage
                                     src={'../images/junoswap-logo.png'}
                                     alt={'Junoswap'}
@@ -114,7 +137,10 @@ export function ServicesSection() {
                                     height={59}
                                     placeholder="blurred"
                                 />
-                                <a href={menu['connect-keplr']} target={'_blank'} rel={'noreferrer'}>
+                                <a href={menu['connect-keplr']} target={'_blank'} rel={'noreferrer'}
+                                   data-sal="fade"
+                                   data-sal-delay="600"
+                                   data-sal-duration="1000">
                                     <button type={'button'} className={'button-white mt-4'}>Connect Keplr</button>
                                 </a>
 
@@ -152,7 +178,10 @@ export function ServicesSection() {
                         <div className={'col-12'}>
                             <div className={'row justify-content-between align-items-center'}>
                                 <div className={'col-auto'}>
-                                    <h3>
+                                    <h3
+                                        data-sal="fade"
+                                        data-sal-delay="200"
+                                        data-sal-duration="1000">
                                         Core <br/>
                                         Contributors
                                     </h3>
@@ -162,7 +191,10 @@ export function ServicesSection() {
                         <div className={'col-12 pt-4'}>
                             <Contributors/>
                         </div>
-                        <div className={'col-12 pt-4'}>
+                        <div className={'col-12 pt-4'}
+                             data-sal="fade"
+                             data-sal-delay="400"
+                             data-sal-duration="1000">
                             <a href={menu['view-all-contributors']} target={'_blank'} rel={'noreferrer'}>
                                 <div className={'link'}><i className={'icon-arrow-right'} aria-label={'View all'}></i>View all</div>
                             </a>

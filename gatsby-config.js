@@ -8,10 +8,18 @@ module.exports = {
         siteUrl: `https://junonetwork.io`
     },
     plugins: ["gatsby-plugin-sass", "gatsby-plugin-scroll-reveal", "gatsby-plugin-image", "gatsby-plugin-react-helmet", "gatsby-plugin-sitemap", {
-        resolve: 'gatsby-plugin-manifest',
+        resolve: "gatsby-plugin-manifest",
         options: {
-            "icon": "src/images/icon.png"
-        }
+            icon: `./src/images/favicons/favicon-96x96.png`, // This path is relative to the root of the site.
+            theme_color: `#312526`,
+            icons: [
+                {
+                    src: `/images/favicons/android-icon-192x192.png`,
+                    sizes: `192x192`,
+                    type: `image/png`,
+                },
+            ],
+        },
     }, "gatsby-plugin-mdx", "gatsby-transformer-remark", `gatsby-plugin-sharp`,
         {
             resolve: `gatsby-transformer-sharp`,
@@ -33,6 +41,13 @@ module.exports = {
             "path": "./src/pages/"
         },
         __key: "pages"
+    },
+    {
+        resolve: "gatsby-plugin-anchor-links",
+        options: {
+            offset: -100,
+            duration: 300
+        }
     }
     ]
 };

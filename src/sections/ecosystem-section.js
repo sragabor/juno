@@ -35,10 +35,10 @@ const EcosystemSection = () => {
                                  data-sal-duration="1000">
                                 Discover a wide variety of dapps, contracts and tools, built in the Junø ecosystem by developers and contributors from across the globe
                             </div>
-                            <Link to={menu.ecosystem} data-sal="fade"
-                               data-sal-delay="800"
-                               data-sal-duration="1000">
-                                <div className={'link'}><i className={'icon-arrow-right'} aria-label={'View Ecosystem'}></i> View Ecosystem</div>
+                            <Link to={menu.ecosystem}>
+                                <div className={'link'} data-sal="fade"
+                                     data-sal-delay="800"
+                                     data-sal-duration="1000"><i className={'icon-arrow-right'} aria-label={'View Ecosystem'}></i> View Ecosystem</div>
                             </Link>
                         </div>
                     </div>

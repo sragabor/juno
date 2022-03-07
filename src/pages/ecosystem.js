@@ -1,20 +1,31 @@
 import * as React from "react"
+import {AnchorLink} from "gatsby-plugin-anchor-links";
 import Layout from "../components/layout";
 import Ecosystem from "../components/ecosystem";
 import EcosystemVideoMov from "../videos/ecosystem.mp4";
 import EcosystemVideo from "../videos/ecosystem.webm";
 import EcosystemPoster from "../videos/ecosystem.png";
+import {useEffect} from "react";
 
 const menu = require('../contents/urls.json');
 const ecosystems = require('../contents/ecosystems.json');
 const daos = require('../contents/daos.json');
 
 function toggleNav(){
-    console.log('OK');
     document.getElementById('filter-nav').classList.toggle('opened');
 }
 
-const EcosystemPage = () => {
+function loadTab(props){
+    const currentCategory = props.location.hash ? props.location.hash.substring(1) : 'all';
+    document.getElementById('nav-'+currentCategory+'-tab').click();
+}
+
+const EcosystemPage = (props) => {
+    useEffect(() => {
+        loadTab(props);
+        document.getElementById('filter-nav').classList.remove('opened');
+        window.scrollTo(0,0)
+    });
     return (
         <div className={'ecosystem-page'}>
             <Layout>
@@ -46,9 +57,9 @@ const EcosystemPage = () => {
                                      data-sal-delay="600"
                                      data-sal-duration="1000">
                                     <div className={'col-auto'}>
-                                        <a href={'dsdasd'}>
+                                        <AnchorLink to={'/ecosystem/#browse'}>
                                             <button type={'button'}>Start browsing</button>
-                                        </a>
+                                        </AnchorLink>
                                     </div>
                                 </div>
                             </div>
@@ -56,7 +67,7 @@ const EcosystemPage = () => {
                     </div>
                 </section>
 
-                <section className={'search-section pt-5 mt-4 mt-lg-5'}>
+                <section id={'browse'} className={'search-section pt-5 mt-4 mt-lg-5'}>
                     <div className={'container'}>
                         <div className={'row justify-content-between'}>
                             <div className={'col-auto'}>
@@ -107,9 +118,9 @@ const EcosystemPage = () => {
                                     <div className={'col-12'}>
                                         <h6 className={'mb-2'}>Featured</h6>
                                     </div>
-                                    {ecosystems.map((ecosystem) => {
+                                    {ecosystems.map((ecosystem, index) => {
                                         return (
-                                            ecosystem.featured && (<div className={'col-12 col-sm-6 col-md-3 p-2'}>
+                                            ecosystem.featured && (<div key={index} className={'col-12 col-sm-6 col-md-3 p-2'}>
                                                 <Ecosystem ecosystem={ecosystem} category={'DAPP'}/>
                                             </div>)
                                         )
@@ -122,9 +133,9 @@ const EcosystemPage = () => {
                                 </div>
 
                                 <div className={'row'}>
-                                    {ecosystems.map((ecosystem) => {
+                                    {ecosystems.map((ecosystem, index) => {
                                         return (
-                                            !ecosystem.featured && (<div className={'col-6 col-md-3 p-2'}>
+                                            !ecosystem.featured && (<div key={index} className={'col-6 col-md-3 p-2'}>
                                                 <Ecosystem ecosystem={ecosystem}/>
                                             </div>)
                                         )
@@ -137,9 +148,9 @@ const EcosystemPage = () => {
                                     <div className={'col-12'}>
                                         <h6 className={'mb-2'}>Featured DAPPS</h6>
                                     </div>
-                                    {ecosystems.map((ecosystem) => {
+                                    {ecosystems.map((ecosystem, index) => {
                                         return (
-                                            ecosystem.featured && (<div className={'col-12 col-sm-6 col-md-3 p-2'}>
+                                            ecosystem.featured && (<div key={index} className={'col-12 col-sm-6 col-md-3 p-2'}>
                                                 <Ecosystem ecosystem={ecosystem} category={'DAPP'}/>
                                             </div>)
                                         )
@@ -152,9 +163,9 @@ const EcosystemPage = () => {
                                 </div>
 
                                 <div className={'row'}>
-                                    {ecosystems.map((ecosystem) => {
+                                    {ecosystems.map((ecosystem,index) => {
                                         return (
-                                            ecosystem.category === 'Dapp' && !ecosystem.featured ? (<div className={'col-6 col-md-3 p-2'}>
+                                            ecosystem.category === 'Dapp' && !ecosystem.featured ? (<div key={index} className={'col-6 col-md-3 p-2'}>
                                                 <Ecosystem ecosystem={ecosystem}/>
                                             </div>) : ''
                                         )
@@ -167,9 +178,9 @@ const EcosystemPage = () => {
                                     <div className={'col-12'}>
                                         <h6 className={'mb-2'}>Featured Contracts</h6>
                                     </div>
-                                    {ecosystems.map((ecosystem) => {
+                                    {ecosystems.map((ecosystem,index) => {
                                         return (
-                                            ecosystem.featured && (<div className={'col-12 col-sm-6 col-md-3 p-2'}>
+                                            ecosystem.featured && (<div key={index} className={'col-12 col-sm-6 col-md-3 p-2'}>
                                                 <Ecosystem ecosystem={ecosystem} category={'Contracts'}/>
                                             </div>)
                                         )
@@ -182,9 +193,9 @@ const EcosystemPage = () => {
                                 </div>
 
                                 <div className={'row'}>
-                                    {ecosystems.map((ecosystem) => {
+                                    {ecosystems.map((ecosystem,index) => {
                                         return (
-                                            ecosystem.category === 'Contracts' && !ecosystem.featured ? (<div className={'col-6 col-md-3 p-2'}>
+                                            ecosystem.category === 'Contracts' && !ecosystem.featured ? (<div key={index} className={'col-6 col-md-3 p-2'}>
                                                 <Ecosystem ecosystem={ecosystem}/>
                                             </div>) : ''
                                         )
@@ -197,9 +208,9 @@ const EcosystemPage = () => {
                                     <div className={'col-12'}>
                                         <h6 className={'mb-2'}>Featured Tools</h6>
                                     </div>
-                                    {ecosystems.map((ecosystem) => {
+                                    {ecosystems.map((ecosystem,index) => {
                                         return (
-                                            ecosystem.featured && (<div className={'col-12 col-sm-6 col-md-3 p-2'}>
+                                            ecosystem.featured && (<div key={index} className={'col-12 col-sm-6 col-md-3 p-2'}>
                                                 <Ecosystem ecosystem={ecosystem} category={'Tool'}/>
                                             </div>)
                                         )
@@ -212,9 +223,9 @@ const EcosystemPage = () => {
                                 </div>
 
                                 <div className={'row'}>
-                                    {ecosystems.map((ecosystem) => {
+                                    {ecosystems.map((ecosystem,index) => {
                                         return (
-                                            ecosystem.category === 'Tools' && !ecosystem.featured ? (<div className={'col-6 col-md-3 p-2'}>
+                                            ecosystem.category === 'Tools' && !ecosystem.featured ? (<div key={index} className={'col-6 col-md-3 p-2'}>
                                                 <Ecosystem ecosystem={ecosystem}/>
                                             </div>) : ''
                                         )
@@ -234,9 +245,9 @@ const EcosystemPage = () => {
                                     </div>
                                 </div>
                                 <div className={'row'}>
-                                    {daos.map((dao) => {
+                                    {daos.map((dao,index) => {
                                         return (
-                                            dao.featured && (<div className={'col-6 col-md-3 p-2'}>
+                                            dao.featured && (<div key={index} className={'col-6 col-md-3 p-2'}>
                                                 <Ecosystem ecosystem={dao}/>
                                             </div>)
                                         )
@@ -249,9 +260,9 @@ const EcosystemPage = () => {
                                 </div>
 
                                 <div className={'row d-none'}>
-                                    {daos.map((dao) => {
+                                    {daos.map((dao,index) => {
                                         return (
-                                            !dao.featured && (<div className={'col-6 col-md-3 p-2'}>
+                                            !dao.featured && (<div key={index} className={'col-6 col-md-3 p-2'}>
                                                 <Ecosystem ecosystem={dao}/>
                                             </div>)
                                         )

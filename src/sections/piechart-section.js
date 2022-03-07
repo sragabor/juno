@@ -62,13 +62,22 @@ class PiechartSection extends React.Component {
                     </div>
                 </div>
                 <div className={'col-12 col-md-5 pt-5 pt-md-0'}>
-                    <h3>Token Economics</h3>
-                    <div className={'text-box'}>
+                    <h3
+                        data-sal="fade"
+                        data-sal-delay="200"
+                        data-sal-duration="1000">Token Economics</h3>
+                    <div className={'text-box'}
+                         data-sal="fade"
+                         data-sal-delay="400"
+                         data-sal-duration="1000">
                         <p>Juno is a completely community owned and operated smart contract platform.</p>
                         <p>The majority of the genesis supply was stakedropped to atom holders, committed to the locked community pool, and allocated to the vested development reserve & smart contract Hacks.</p>
                     </div>
 
-                    <div className={'black-box'}>
+                    <div className={'black-box'}
+                         data-sal="fade"
+                         data-sal-delay="600"
+                         data-sal-duration="1000">
                         <ul>
                             <li>No seed sale, no private sale, no public sale</li>
                             <li>Fairdrop / Stakedrop Genesis launch</li>

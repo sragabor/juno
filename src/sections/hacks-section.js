@@ -31,7 +31,9 @@ class HackSection extends React.Component {
                                 </p>
                             </div>
                             <a href={menu["hacks-and-bounties"]} target={'_blank'} rel={'noreferrer'}>
-                                <div className={'link'}><i className={'icon-arrow-right'}></i> Learn more</div>
+                                <div className={'link'} data-sal="fade"
+                                     data-sal-delay="600"
+                                     data-sal-duration="1000"><i className={'icon-arrow-right'}></i> Learn more</div>
                             </a>
                         </div>
                         <div className={'col-12 col-md-6 pt-5 pt-md-0 ps-md-5'}>
@@ -121,14 +123,26 @@ class HackSection extends React.Component {
                             </Parallax>
                         </div>
                         <div className={'col-12 col-md-6'}>
-                            <legend>COSMWASM</legend>
-                            <h3 className={'mb-4'}>Interoperable Smart Contracts - Home of CosmWasm</h3>
-                            <div className={'text-box'}>
+                            <legend
+                                data-sal="fade"
+                                data-sal-delay="100"
+                                data-sal-duration="1000">COSMWASM</legend>
+                            <h3 className={'mb-4'}
+                                data-sal="fade"
+                                data-sal-delay="200"
+                                data-sal-duration="1000">Interoperable Smart Contracts - Home of CosmWasm</h3>
+                            <div className={'text-box'}
+                                 data-sal="fade"
+                                 data-sal-delay="400"
+                                 data-sal-duration="1000">
                                 Simple, secure and fast virtual machine set up to sandbox or partition your application’s actions for better testing, security, performance and speed.
                             </div>
 
                             <a href={menu["cosmwasm"]} target={'_blank'} rel={'noreferrer'}>
-                                <div className={'link'}><i className={'icon-arrow-right'}></i> Learn more</div>
+                                <div className={'link'}
+                                     data-sal="fade"
+                                     data-sal-delay="600"
+                                     data-sal-duration="1000"><i className={'icon-arrow-right'}></i> Learn more</div>
                             </a>
 
                             <div className={'row mt-4'}>

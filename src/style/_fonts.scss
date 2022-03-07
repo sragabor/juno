@@ -217,6 +217,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-website:before {
+  content: "\e90c";
+}
 .icon-twitter:before {
   content: "\e900";
   color: #fff;

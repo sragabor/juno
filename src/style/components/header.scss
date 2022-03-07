@@ -39,7 +39,7 @@ header{
     display:none;
     z-index:101;
 
-    @include media-breakpoint-down(sm){
+    @include media-breakpoint-down(md){
       display:block;
     }
   }
@@ -51,7 +51,7 @@ header{
     ul{
       list-style: none;
 
-      @include media-breakpoint-down(sm){
+      @include media-breakpoint-down(md){
         transform:translateY(calc(-50% - 50px));
         top:50%;
         position:absolute;
@@ -70,12 +70,9 @@ header{
         @include transition(500ms all ease-in-out);
 
         @include media-breakpoint-down(md){
-          margin:0 15px;
-        }
-        @include media-breakpoint-down(sm){
           width:100%;
-          font-size:60px;
-          margin:30px 0;
+          font-size:40px;
+          margin:20px 0;
           @include transition(500ms all cubic-bezier(0.87, 0, 0.13, 1));
 
           &:nth-child(1){
@@ -89,6 +86,10 @@ header{
           &:nth-child(3){
             @include transform(translateX(150px));
             transition-delay:(200ms);
+          }
+          &:nth-child(4){
+            @include transform(translateX(150px));
+            transition-delay:(250ms);
           }
         }
 
@@ -109,16 +110,16 @@ header{
           padding:0;
           font-size:16px;
 
-          @include media-breakpoint-down(sm){
-            font-size:24px;
-            margin-top:40px;
+          @include media-breakpoint-down(md){
+            margin-top:30px;
             margin-left:0;
+            line-height:38px;
           }
         }
       }
     }
 
-    @include media-breakpoint-down(sm){
+    @include media-breakpoint-down(md){
       position:fixed;
       top:100px;
       right:-100vw;
@@ -131,7 +132,7 @@ header{
   }
 
   &.menu-opened{
-    @include media-breakpoint-down(sm){
+    @include media-breakpoint-down(md){
       height:100%;
       nav{
         right:0;

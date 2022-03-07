@@ -1,4 +1,5 @@
 import React from "react";
+import {Link} from "gatsby";
 import {StaticImage} from "gatsby-plugin-image";
 import FooterVideoMov from "../videos/footer.mp4";
 import FooterVideo from "../videos/footer.webm";
@@ -30,7 +31,7 @@ class Footer extends React.Component {
                                     <ul>
                                         <li><a href={menu.docs} target={'_blank'} rel={'noreferrer'}>Docs</a></li>
                                         <li><a href={menu.github} target={'_blank'} rel={'noreferrer'}>Github</a></li>
-                                        <li><a href={menu.ecosystem} target={'_blank'} rel={'noreferrer'}>Ecosystem</a></li>
+                                        <li><Link to={menu.ecosystem}>Ecosystem</Link></li>
                                     </ul>
                                 </div>
                                 <div className={'col-12 col-sm-6 col-md-3 pb-4'}>
@@ -48,9 +49,9 @@ class Footer extends React.Component {
                                     <legend>Ecosystem</legend>
 
                                     <ul>
-                                        <li><a href={menu.ecosystem} target={'_blank'} rel={'noreferrer'}>Dapp</a></li>
-                                        <li><a href={menu.ecosystem} target={'_blank'} rel={'noreferrer'}>Tools</a></li>
-                                        <li><a href={menu.ecosystem} target={'_blank'} rel={'noreferrer'}>Contracts</a></li>
+                                        <li><Link to={menu.ecosystem+'#dapp'} state={{category:'dapp'}} target={'_blank'} rel={'noreferrer'}>Dapp</Link></li>
+                                        <li><Link to={menu.ecosystem+'#tools'} state={{category:'tools'}} target={'_blank'} rel={'noreferrer'}>Tools</Link></li>
+                                        <li><Link to={menu.ecosystem+'#contracts'} state={{category:'contracts'}} target={'_blank'} rel={'noreferrer'}>Contracts</Link></li>
                                     </ul>
                                 </div>
                                 <div className={'col-12 col-sm-6 col-md-4 pb-4'}>

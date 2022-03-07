@@ -42,7 +42,7 @@ const EcosystemLogo = props => (
 
 
             //const imageSizes = image.node.childImageSharp.sizes; sizes={imageSizes}
-            return <GatsbyImage image={image.node.childImageSharp.gatsbyImageData} imgStyle={{}} />;
+            return <GatsbyImage alt={props.alt} image={image.node.childImageSharp.gatsbyImageData} imgStyle={{}} />;
         }}
     />
 );
