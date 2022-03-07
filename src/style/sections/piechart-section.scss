@@ -2,18 +2,50 @@
   padding-top:130px;
 
   @include media-breakpoint-down(sm){
-    padding-top:100px;
+    padding-top:50px;
   }
 
     .video-container{
     width:100%;
 
+      @include media-breakpoint-down(xxl){
+        @include transform(scale(.9));
+        @include transform-origin(left center);
+        width:600px;
+      }
+
+      @include media-breakpoint-down(xl){
+        @include transform(scale(.8));
+      }
+
+      @include media-breakpoint-down(lg){
+        @include transform(scale(.7));
+      }
+
+      @include media-breakpoint-down(md){
+        @include transform(scale(.9));
+        margin:auto;
+      }
+
+      @include media-breakpoint-down(sm){
+        @include transform(scale(.7));
+        height:450px;
+      }
+
+      @media (max-width: 460px){
+        @include transform(scale(.6));
+        height:420px;
+      }
+
+      @media (max-width: 400px){
+        @include transform(scale(.5));
+        height:400px;
+      }
+
     .video-wrapper{
       padding-top:86%;
       width:100%;
       position: relative;
-      min-width:600px;
-
 
       video{
         position:absolute;
@@ -30,14 +62,6 @@
           color: #FFFFFF;
           letter-spacing: 0;
           z-index:2;
-
-          @include media-breakpoint-down(sm){
-            font-size:14px;
-
-            &:before,&:after{
-              display:none;
-            }
-          }
 
           span{
             font-size:1.5em;
@@ -79,11 +103,6 @@
               right:30px;
             }
 
-            @include media-breakpoint-down(sm){
-              transform:scale(.7);
-              transform-origin: left top;
-            }
-
           }
 
           &.text2{
@@ -109,11 +128,6 @@
               position:absolute;
               bottom:-7px;
               left:5px;
-            }
-
-            @include media-breakpoint-down(sm){
-              transform:scale(.7);
-              transform-origin: right top;
             }
           }
 
@@ -141,11 +155,6 @@
               bottom:-7px;
               left:5px;
             }
-
-            @include media-breakpoint-down(sm){
-              transform:scale(.7);
-              transform-origin: right top;
-            }
           }
 
           &.text4{
@@ -172,11 +181,6 @@
               top:-7px;
               left:5px;
             }
-
-            @include media-breakpoint-down(sm){
-              transform:scale(.7);
-              transform-origin: right bottom;
-            }
           }
 
           &.text5{
@@ -202,11 +206,6 @@
               position:absolute;
               top:-7px;
               left:5px;
-            }
-
-            @include media-breakpoint-down(sm){
-              transform:scale(.7);
-              transform-origin: left bottom;
             }
           }
         }

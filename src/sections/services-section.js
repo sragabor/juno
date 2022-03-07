@@ -19,12 +19,12 @@ export function ServicesSection() {
                                     <div className={'title'}>Cosmostation Wallet</div>
                                     <div className={'row'}>
                                         <div className={'col-auto'}>
-                                            <a href={menu.cosmostation}>
+                                            <a href={menu.cosmostation} target={'_blank'} rel={'noreferrer'}>
                                                 <button type={'button'}>Install Cosmostation</button>
                                             </a>
                                         </div>
                                         <div className={'col-auto'}>
-                                            <a href={menu.cosmostation}>
+                                            <a href={menu['cosmostation-use']} target={'_blank'} rel={'noreferrer'}>
                                                 <div className={'link'}><i className={'icon-arrow-right'}></i>How to use it?</div>
                                             </a>
                                         </div>
@@ -46,7 +46,7 @@ export function ServicesSection() {
                                     </div>
                                     <div className={'row'}>
                                         <div className={'col-auto'}>
-                                            <a href={menu.cosmostation}>
+                                            <a href={menu['staking-juno']} target={'_blank'} rel={'noreferrer'}>
                                                 <button type={'button'}>Learn more</button>
                                             </a>
                                         </div>
@@ -60,12 +60,12 @@ export function ServicesSection() {
                                     <div className={'title'}>Keplr wallet</div>
                                     <div className={'row'}>
                                         <div className={'col-auto'}>
-                                            <a href={menu.cosmostation}>
+                                            <a href={menu.keplr} target={'_blank'} rel={'noreferrer'}>
                                                 <button type={'button'}>Install Keplr Wallet</button>
                                             </a>
                                         </div>
                                         <div className={'col-auto'}>
-                                            <a href={menu.cosmostation}>
+                                            <a href={menu['keplr-use']} target={'_blank'} rel={'noreferrer'}>
                                                 <div className={'link'}><i className={'icon-arrow-right'}></i>How to use it?</div>
                                             </a>
                                         </div>
@@ -94,12 +94,12 @@ export function ServicesSection() {
                             </div>
                             <div className={'row mt-4'}>
                                 <div className={'col-auto'}>
-                                    <a href={menu.cosmostation}>
+                                    <a href={menu.junoswap} target={'_blank'} rel={'noreferrer'}>
                                         <button type={'button'}>Enter JunoSwap</button>
                                     </a>
                                 </div>
                                 <div className={'col-auto'}>
-                                    <a href={menu.osmosis}>
+                                    <a href={menu.osmosis} target={'_blank'} rel={'noreferrer'}>
                                         <div className={'link'}><i className={'icon-arrow-right'} aria-label={'Enter Osmosis'}></i>Enter Osmosis</div>
                                     </a>
                                 </div>
@@ -114,7 +114,7 @@ export function ServicesSection() {
                                     height={59}
                                     placeholder="blurred"
                                 />
-                                <a href={menu.keplr}>
+                                <a href={menu['connect-keplr']} target={'_blank'} rel={'noreferrer'}>
                                     <button type={'button'} className={'button-white mt-4'}>Connect Keplr</button>
                                 </a>
 
@@ -163,7 +163,7 @@ export function ServicesSection() {
                             <Contributors/>
                         </div>
                         <div className={'col-12 pt-4'}>
-                            <a href={menu.cosmostation} >
+                            <a href={menu['view-all-contributors']} target={'_blank'} rel={'noreferrer'}>
                                 <div className={'link'}><i className={'icon-arrow-right'} aria-label={'View all'}></i>View all</div>
                             </a>
                         </div>

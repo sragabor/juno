@@ -30,7 +30,7 @@ class HackSection extends React.Component {
                                     Developers from across the world may deploy smart contracts onto the permission-less interoperable smart contract base layer called Juno.
                                 </p>
                             </div>
-                            <a href={menu["hacks-and-bounties"]}>
+                            <a href={menu["hacks-and-bounties"]} target={'_blank'} rel={'noreferrer'}>
                                 <div className={'link'}><i className={'icon-arrow-right'}></i> Learn more</div>
                             </a>
                         </div>
@@ -127,7 +127,7 @@ class HackSection extends React.Component {
                                 Simple, secure and fast virtual machine set up to sandbox or partition your application’s actions for better testing, security, performance and speed.
                             </div>
 
-                            <a href={process.env.COSMWASMPAGE}>
+                            <a href={menu["cosmwasm"]} target={'_blank'} rel={'noreferrer'}>
                                 <div className={'link'}><i className={'icon-arrow-right'}></i> Learn more</div>
                             </a>
 

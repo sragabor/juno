@@ -5,14 +5,9 @@ require("dotenv").config({
 module.exports = {
     siteMetadata: {
         title: `Juno`,
-        siteUrl: `https://juno.co`
+        siteUrl: `https://junonetwork.io`
     },
-    plugins: ["gatsby-plugin-sass", "gatsby-plugin-scroll-reveal", {
-        resolve: 'gatsby-plugin-google-analytics',
-        options: {
-            "trackingId": "GA-555555"
-        }
-    }, "gatsby-plugin-image", "gatsby-plugin-react-helmet", "gatsby-plugin-sitemap", {
+    plugins: ["gatsby-plugin-sass", "gatsby-plugin-scroll-reveal", "gatsby-plugin-image", "gatsby-plugin-react-helmet", "gatsby-plugin-sitemap", {
         resolve: 'gatsby-plugin-manifest',
         options: {
             "icon": "src/images/icon.png"

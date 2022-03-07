@@ -1,5 +1,5 @@
-import React, {useEffect} from "react";
-import {isMobile} from 'react-device-detect';
+import React from "react";
+import {Link} from "gatsby";
 
 import EcosystemVideo from "../videos/ecosystem.webm";
 import EcosystemPoster from "../videos/ecosystem.png";
@@ -8,39 +8,6 @@ import EcosystemVideoMov from "../videos/ecosystem.mp4";
 const menu = require('../contents/urls.json');
 
 const EcosystemSection = () => {
-
-        /*useEffect(() => {
-            console.log('OK');
-                var isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
-                var Mobile = false;
-
-                if (isMobile) {
-                    Mobile = true;
-                }
-
-                if(isSafari && Mobile){
-                    const videoElement = document.getElementById('ecosystem-video');
-                    const videoElementBG = document.getElementById('video-bg');
-                    videoElement.addEventListener('suspend', () => {
-                        console.log('suspend');
-                        videoElement.style.display = "none"
-                        videoElementBG.style.display = "block"
-                        // suspend invoked
-                        // show play button
-                        // iphone is in low power mode
-                    });
-
-                    videoElement.addEventListener('play', () => {
-                        console.log('play');
-                        videoElement.style.display = "block"
-                        videoElementBG.style.display = "none"
-                        // video is played
-                        // remove play button UI
-                        // iphone is not in low power mode
-                    });
-            }
-        });*/
-
         return (
             <section className={'ecosystem-section'}>
                 <div className={'container'}>
@@ -68,11 +35,11 @@ const EcosystemSection = () => {
                                  data-sal-duration="1000">
                                 Discover a wide variety of dapps, contracts and tools, built in the Junø ecosystem by developers and contributors from across the globe
                             </div>
-                            <a href={menu.ecosystem} data-sal="fade"
+                            <Link to={menu.ecosystem} data-sal="fade"
                                data-sal-delay="800"
                                data-sal-duration="1000">
-                                <div className={'link'}><i className={'icon-arrow-right'}></i> View Ecosystem</div>
-                            </a>
+                                <div className={'link'}><i className={'icon-arrow-right'} aria-label={'View Ecosystem'}></i> View Ecosystem</div>
+                            </Link>
                         </div>
                     </div>
                 </div>

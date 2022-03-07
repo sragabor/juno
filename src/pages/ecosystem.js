@@ -9,7 +9,10 @@ const menu = require('../contents/urls.json');
 const ecosystems = require('../contents/ecosystems.json');
 const daos = require('../contents/daos.json');
 
-
+function toggleNav(){
+    console.log('OK');
+    document.getElementById('filter-nav').classList.toggle('opened');
+}
 
 const EcosystemPage = () => {
     return (
@@ -30,21 +33,21 @@ const EcosystemPage = () => {
                             <div className={'col-12 col-sm-8 col-xl-10'}>
                                 <h1 data-sal="fade"
                                     data-sal-delay="200"
-                                    data-sal-duration="1000">47 apps, contracts, tools and 1400 DAO's built on Juno
+                                    data-sal-duration="1000">The Juno Ecosystem
                                 </h1>
 
                                 <div className={'text-box'} data-sal="fade"
                                      data-sal-delay="400"
                                      data-sal-duration="1000">
-                                    Discover a wide variety of dapps, contracts and tools, built in the Junø ecosystem by developers and contributors from across the globe.
+                                    50+ apps, contracts, tools and 2000+ DAO's built on Juno
                                 </div>
 
                                 <div className={'row'} data-sal="fade"
                                      data-sal-delay="600"
                                      data-sal-duration="1000">
                                     <div className={'col-auto'}>
-                                        <a href={menu["start-searching"]}>
-                                            <button type={'button'}>Start searching</button>
+                                        <a href={'dsdasd'}>
+                                            <button type={'button'}>Start browsing</button>
                                         </a>
                                     </div>
                                 </div>
@@ -65,24 +68,29 @@ const EcosystemPage = () => {
                             </div>
                             <div className={'col-12 col-md-auto'}>
                                 <nav>
-                                    <div className="nav nav-tabs" id="nav-tab" role="tablist">
+                                    <div className="nav nav-tabs" id="filter-nav" role="tablist">
                                         <button className="nav-link active" id="nav-all-tab"
+                                                onClick={()=>toggleNav()}
                                                 data-bs-toggle="tab" data-bs-target="#nav-all" type="button"
                                                 role="tab" aria-controls="nav-all" aria-selected="true">All
                                         </button>
                                         <button className="nav-link" id="nav-dapp-tab"
+                                                onClick={()=>toggleNav()}
                                                 data-bs-toggle="tab" data-bs-target="#nav-dapp" type="button"
                                                 role="tab" aria-controls="nav-dapp" aria-selected="true">Dapp
                                         </button>
                                         <button className="nav-link" id="nav-contracts-tab" data-bs-toggle="tab"
+                                                onClick={()=>toggleNav()}
                                                 data-bs-target="#nav-contracts" type="button" role="tab"
                                                 aria-controls="nav-contracts" aria-selected="false">Contracts
                                         </button>
                                         <button className="nav-link" id="nav-tools-tab" data-bs-toggle="tab"
+                                                onClick={()=>toggleNav()}
                                                 data-bs-target="#nav-tools" type="button" role="tab"
                                                 aria-controls="nav-tools" aria-selected="false">Tools
                                         </button>
                                         <button className="nav-link" id="nav-dao-tab" data-bs-toggle="tab"
+                                                onClick={()=>toggleNav()}
                                                 data-bs-target="#nav-dao" type="button" role="tab"
                                                 aria-controls="nav-dao" aria-selected="false">Dao
                                         </button>
@@ -97,7 +105,7 @@ const EcosystemPage = () => {
                                  aria-labelledby="nav-all-tab">
                                 <div className={'row'}>
                                     <div className={'col-12'}>
-                                        <h6 className={'mb-2'}>Featured Ecosystem</h6>
+                                        <h6 className={'mb-2'}>Featured</h6>
                                     </div>
                                     {ecosystems.map((ecosystem) => {
                                         return (
@@ -109,7 +117,7 @@ const EcosystemPage = () => {
                                 </div>
                                 <div className={'row mt-5'}>
                                     <div className={'col-12'}>
-                                        <h6 className={'mb-2'}>All Ecosystems</h6>
+                                        <h6 className={'mb-2'}>All DAPPS, Contracts, Tools</h6>
                                     </div>
                                 </div>
 
@@ -221,7 +229,7 @@ const EcosystemPage = () => {
                                     </div>
                                     <div className={'col-auto'}>
                                         <a href={menu.daolink} target={'_blank'} rel={'noreferrer'}>
-                                            <div className={'link'}><i className={'icon-arrow-right'} aria-label={'View all DAO on DaoLink'}></i>View all DAO on DaoLink</div>
+                                            <div className={'link'}><i className={'icon-arrow-right'} aria-label={'View all DAOs'}></i>View all DAOs</div>
                                         </a>
                                     </div>
                                 </div>

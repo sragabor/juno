@@ -28,42 +28,43 @@ class Footer extends React.Component {
                                     <legend>Build</legend>
 
                                     <ul>
-                                        <li><a href={menu.docs} rel={'noreferrer'}>Docs</a></li>
-                                        <li><a href={menu.github} rel={'noreferrer'}>Github</a></li>
-                                        <li><a href={menu.ecosystem} rel={'noreferrer'}>Ecosystem</a></li>
-                                        <li><a href={menu.status} rel={'noreferrer'}>Status</a></li>
+                                        <li><a href={menu.docs} target={'_blank'} rel={'noreferrer'}>Docs</a></li>
+                                        <li><a href={menu.github} target={'_blank'} rel={'noreferrer'}>Github</a></li>
+                                        <li><a href={menu.ecosystem} target={'_blank'} rel={'noreferrer'}>Ecosystem</a></li>
                                     </ul>
                                 </div>
                                 <div className={'col-12 col-sm-6 col-md-3 pb-4'}>
                                     <legend>Community</legend>
 
                                     <ul>
-                                        <li><a href={menu.github} rel={'noreferrer'}>Github</a></li>
-                                        <li><a href={menu.discord} rel={'noreferrer'}>Chat on Discord</a></li>
-                                        <li><a href={menu.telegram} rel={'noreferrer'}>Telegram</a></li>
-                                        <li><a href={menu.twitter} rel={'noreferrer'}>Twitter</a></li>
-                                        <li><a href={menu.blog} rel={'noreferrer'}>Blog</a></li>
+                                        <li><a href={menu.github} target={'_blank'} rel={'noreferrer'}>Github</a></li>
+                                        <li><a href={menu.discord} target={'_blank'} rel={'noreferrer'}>Chat on Discord</a></li>
+                                        <li><a href={menu.telegram} target={'_blank'} rel={'noreferrer'}>Telegram</a></li>
+                                        <li><a href={menu.twitter} target={'_blank'} rel={'noreferrer'}>Twitter</a></li>
+                                        <li><a href={menu.blog} target={'_blank'} rel={'noreferrer'}>Blog</a></li>
                                     </ul>
                                 </div>
                                 <div className={'col-12 col-sm-6 col-md-3 pb-4'}>
                                     <legend>Ecosystem</legend>
 
                                     <ul>
-                                        <li><a href={menu.ecosystem}>Dapp</a></li>
-                                        <li><a href={menu.ecosystem}>Tools</a></li>
-                                        <li><a href={menu.ecosystem}>Contracts</a></li>
+                                        <li><a href={menu.ecosystem} target={'_blank'} rel={'noreferrer'}>Dapp</a></li>
+                                        <li><a href={menu.ecosystem} target={'_blank'} rel={'noreferrer'}>Tools</a></li>
+                                        <li><a href={menu.ecosystem} target={'_blank'} rel={'noreferrer'}>Contracts</a></li>
                                     </ul>
                                 </div>
                                 <div className={'col-12 col-sm-6 col-md-4 pb-4'}>
                                     <legend>Network Data & Trackers</legend>
 
                                     <ul>
-                                        <li><a href={menu.coingecko}>Coingecko</a></li>
-                                        <li><a href={menu.osmosis}>Osmosis data</a></li>
-                                        <li><a href={menu.onchain}>On-chain data</a></li>
-                                        <li><a href={menu.onchain}>On-chain data 2</a></li>
-                                        <li><a href={menu.onchain}>On-chain data 3</a></li>
-                                        <li><a href={menu.coinmarketcap}>Coinmarketcap</a></li>
+                                        <li><a href={menu.coingecko} target={'_blank'} rel={'noreferrer'}>Coingecko</a></li>
+                                        <li><a href={menu.explorer1} target={'_blank'} rel={'noreferrer'}>Explorer 1</a></li>
+                                        <li><a href={menu.explorer2} target={'_blank'} rel={'noreferrer'}>Explorer 2</a></li>
+                                        <li><a href={menu['contract-data']} target={'_blank'} rel={'noreferrer'}>Contract data</a></li>
+                                        <li><a href={menu['osmosis-dex']} target={'_blank'} rel={'noreferrer'}>Osmosis DEX data</a></li>
+                                        <li><a href={menu.onchain1} target={'_blank'} rel={'noreferrer'}>On-chain data</a></li>
+                                        <li><a href={menu.onchain2} target={'_blank'} rel={'noreferrer'}>On-chain data 2</a></li>
+                                        <li><a href={menu.coinmarketcap} target={'_blank'} rel={'noreferrer'}>Coinmarketcap</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -79,10 +80,10 @@ class Footer extends React.Component {
                                 <div className={'social'}>
                                     <div className={'row justify-content-center justify-content-mb-end'}>
                                         <div className={'col-auto'}>
-                                            <a href={menu.twitter}><i className={'icon-social-twitter'} aria-label={'Twitter'}></i></a>
-                                            <a href={menu.github}><i className={'icon-social-github'} aria-label={'Github'}></i></a>
-                                            <a href={menu.discord}><i className={'icon-social-discord'} aria-label={'Discord'}></i></a>
-                                            <a href={menu.telegram}><i className={'icon-social-telegram'} aria-label={'Telegram'}></i></a>
+                                            <a href={menu.twitter} target={'_blank'} rel={'noreferrer'}><i className={'icon-social-twitter'} aria-label={'Twitter'}></i></a>
+                                            <a href={menu.github} target={'_blank'} rel={'noreferrer'}><i className={'icon-social-github'} aria-label={'Github'}></i></a>
+                                            <a href={menu.discord} target={'_blank'} rel={'noreferrer'}><i className={'icon-social-discord'} aria-label={'Discord'}></i></a>
+                                            <a href={menu.telegram} target={'_blank'} rel={'noreferrer'}><i className={'icon-social-telegram'} aria-label={'Telegram'}></i></a>
                                         </div>
                                     </div>
                                 </div>

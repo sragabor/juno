@@ -44,6 +44,7 @@ const Contributors = ({ deviceType }) => {
             itemClass="image-item"
             shouldResetAutoplay={false}
             responsive={responsive}
+            infinite={true}
             renderButtonGroupOutside={true}
             arrows={false} customButtonGroup={<ButtonGroup />}
         >

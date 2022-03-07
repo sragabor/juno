@@ -1,4 +1,5 @@
 import React from "react";
+import {Link} from "gatsby";
 import HeroVideoMov from "../videos/hero.mp4";
 import HeroVideo from "../videos/hero.webm";
 import HeroVideoPoster from "../videos/hero.png"
@@ -45,9 +46,10 @@ class HeroSection extends React.Component {
                                     </a>
                                 </div>
                                 <div className={'col-auto'}>
-                                    <a href={menu.ecosystem}>
+                                    <Link to={menu.ecosystem}>
                                         <div className={'link'}><i className={'icon-arrow-right'}></i> Ecosystem </div>
-                                    </a></div>
+                                    </Link>
+                                </div>
                             </div>
                         </div>
                     </div>
