@@ -4,6 +4,10 @@ import Header from "./header";
 import {Helmet} from "react-helmet";
 import { ParallaxProvider } from 'react-scroll-parallax';
 
+import ogimage from '../images/ogimage.png';
+import favicon from '../images/favicons/apple-icon-57x57.png';
+import favicon72 from '../images/favicons/apple-icon-72x72.png';
+
 export default function Layout({ children }) {
 
     return (
@@ -20,10 +24,10 @@ export default function Layout({ children }) {
                 <meta content="Juno is an interoperable smart contract network and a zone part of the Cosmos Network. Highly scalable, robust, secure and easy to deploy!" name="description"/>
                 <meta content="Smart Contracts Zone" property="og:site_name"/>
                 <meta content="https://junonetwork.io/" property="og:url"/>
-                <meta content="/src/images/ogimage.png" property="og:image"/>
+                <meta content={ogimage} property="og:image"/>
 
-                <link rel="apple-touch-icon" href="/src/images/favicons/apple-icon-57x57.png" />
-                <link rel="apple-touch-icon" sizes="72x72" href="/src/images/favicons/apple-icon-72x72.png" />
+                <link rel="apple-touch-icon" href={favicon} />
+                <link rel="apple-touch-icon" sizes="72x72" href={favicon72} />
 
                 <link rel="canonical" href="https://junonetwork.io/" />
                 <meta name="theme-color" content="#312526"/>
